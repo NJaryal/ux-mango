@@ -1,0 +1,20 @@
+/*
+ *
+ * bordered link instead of the underline
+ * USAGE:
+ * <div class="link-bordered"><a href="">somet link</a></div>
+ *
+**/
+
+.link-bordered {
+  a {
+    text-decoration: none;
+    border-bottom-width: $border-width;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+
+    &:hover, &:focus {
+      border-bottom-color: inherit;
+    }
+  }
+}

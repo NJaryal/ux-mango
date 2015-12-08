@@ -1,0 +1,25 @@
+$enable-baseline-grid: false !default;
+$enable-debug-hard   : false !default;
+
+// vertical rhythm baseline guide
+@mixin grid-overlay($color: black, $px-offset: false) {
+  body {
+    background: linear-gradient(to top, rgba($color, .1) 5%, white 5%);
+    background-size: 100% ($line-height) + rem;
+    @if($px-offset) {
+      background-position: 0 $px-offset + px;
+    }
+  }
+}
+
+@if $enable-baseline-grid == true {
+  @include grid-overlay(#9e77d4, 0);
+}
+
+@if $enable-debug-hard == true {
+  * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: 1px solid #f00 !important;
+  }
+}

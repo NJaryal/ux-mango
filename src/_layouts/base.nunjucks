@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{% block title %}{% endblock %} - DMart</title>
+
+{% include "_modules/header-meta.nunjucks" %}
+
+</head>
+<body>
+
+{% block content %}{% endblock %}
+
+{% include "_modules/footer-meta.nunjucks" %}
+
+</body>
+</html>

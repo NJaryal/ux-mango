@@ -1,0 +1,43 @@
+{
+  "name": "dmart",
+  "version": "1.0.0",
+  "homepage": "http://www.dmartindia.com/",
+  "authors": [
+    "Brajeshwar, http://brajeshwar.me",
+    "Razorfish, http://razorfish.com"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "dmart"
+  ],
+  "license": "Commercial",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/_bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.4",
+    "ciku-forms": "~0.0.5",
+    "jquery": "~2.1.4",
+    "normalize-scss": "~3.0.3",
+    "jquery-validation": "~1.14.0"
+  },
+  "devDependencies": {
+    "flexslider": "~2.5.0",
+    "ion.rangeslider": "ionrangeslider#~2.0.13",
+    "jquery-selectric": "~1.9.3",
+    "malihu-custom-scrollbar-plugin": "~3.0.9",
+    "raty": "~2.7.0",
+    "clipboard": "~1.5.5"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4"
+  }
+}

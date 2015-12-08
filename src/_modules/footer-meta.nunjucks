@@ -1,0 +1,219 @@
+  <!--[if lt IE 9]>
+  <script src="/{{config.baseUrl}}scripts/html5shiv.js"></script>
+  <![endif]-->
+  <!-- Footer ends -->
+  <!-- Scroll to top -->
+  <span style="display: none;" class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>
+  <!-- JS -->
+  <script src="/{{config.baseUrl}}scripts/jquery.js"></script>
+  <!-- jQuery -->
+  <script src="/{{config.baseUrl}}scripts/bootstrap-datetimepicker.js"></script>
+  <!-- Bootstrap -->
+  <script src="/{{config.baseUrl}}scripts/jquery-ui.js"></script>
+  <!-- jQuery UI -->
+  <script src="/{{config.baseUrl}}scripts/fullcalendar.js"></script>
+  <!-- RateIt - Star rating -->
+  <script src="/{{config.baseUrl}}scripts/jquery_009.js"></script>
+  <!-- prettyPhoto -->
+  <script src="/{{config.baseUrl}}scripts/jquery_006.js"></script>
+  <!-- jQuery Slim Scroll -->
+  <script src="/{{config.baseUrl}}scripts/jquery_012.js"></script>
+  <!-- Data tables -->
+  <script src="/{{config.baseUrl}}scripts/sparklines.js"></script>
+  <!-- Sparklines -->
+  <script src="/{{config.baseUrl}}scripts/jquery_003.js"></script>
+  <!-- CLEditor -->
+  <script src="/{{config.baseUrl}}scripts/jquery_008.js"></script>
+  <!-- Bootstrap Toggle -->
+  <script src="/{{config.baseUrl}}scripts/custom.js"></script>
+  <!-- Custom codes -->
+  <script src="/{{config.baseUrl}}scripts/charts.js"></script>
+  <!-- Charts & Graphs -->
+  <script type="text/javascript" src="https://www.google.com/jsapi?autoload={
+            'modules':[{
+              'name':'visualization',
+              'version':'1',
+              'packages':['corechart']
+            }]
+          }"></script>
+  <link href="https://www.google.com/uds/api/visualization/1.0/abbdd6ab2d343a51d49841bf93d022fb/ui+en.css" type="text/css" rel="stylesheet">
+  <script src="https://www.google.com/uds/api/visualization/1.0/abbdd6ab2d343a51d49841bf93d022fb/format+en,default+en,ui+en,corechart+en.I.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+
+    $(".daily").click(function() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Dates', 'Daily'],
+        ['29-07-15', 10],
+        ['30-07-15', 11],
+        ['01-07-15', 66],
+        ['02-07-15', 100],
+        ['03-07-15', 10],
+        ['04-07-15', 11],
+        ['05-07-15', 66]
+      ]);
+
+      var options = {
+        title: 'Statistics',
+        curveType: 'function',
+        legend: {
+          position: 'bottom'
+        },
+        width: 500,
+        height: 300
+
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('curve_chart'));
+      var chart2 = new google.visualization.LineChart(document.getElementById('average_sales'));
+
+      chart.draw(data, options);
+      chart2.draw(data, options);
+
+
+    });
+    $(".monthly").click(function() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Months', 'Monthly'],
+        ['Jan', 1000],
+        ['Feb', 1170],
+        ['Mar', 660],
+        ['Apr', 1030],
+        ['May', 1000],
+        ['June', 2170],
+        ['July', 660],
+        ['Aug', 830],
+        ['Sep', 1000],
+        ['Oct', 1570],
+        ['Nov', 660],
+        ['Dec', 830]
+      ]);
+
+      var options = {
+        title: 'Statistics',
+        curveType: 'function',
+        legend: {
+          position: 'bottom'
+        },
+        width: 500,
+        height: 300
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('curve_chart'));
+      var chart2 = new google.visualization.LineChart(document.getElementById('average_sales'));
+
+      chart.draw(data, options);
+      chart2.draw(data, options);
+
+
+    });
+    $(".yearly").click(function() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Years', 'Yearly'],
+        ['2005', 1450],
+        ['2006', 8954],
+        ['2007', 2652],
+        ['2008', 030],
+        ['2009', 1450],
+        ['2010', 10],
+        ['2011', 1678],
+        ['2012', 6560],
+        ['2013', 1450],
+        ['2014', 1678],
+        ['2015', 660],
+      ]);
+
+      var options = {
+        title: 'Statistics',
+        curveType: 'function',
+        legend: {
+          position: 'bottom'
+        },
+        width: 500,
+        height: 300
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('curve_chart'));
+
+      var chart2 = new google.visualization.LineChart(document.getElementById('average_sales'));
+
+      chart.draw(data, options);
+      chart2.draw(data, options);
+
+
+    });
+    $(".daily").trigger('click');
+  });
+  </script>
+  <!-- Most Visited -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+  google.load("visualization", '1.1', {
+    packages: ['corechart']
+  });
+  google.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var oldData = google.visualization.arrayToDataTable([
+      ['Name', 'Popularity'],
+      ['Phones', 250],
+      ['Clothes', 200],
+      ['Shoes', 250],
+      ['Clothes', 4200],
+      ['Grocery', 2900],
+      ['Toys', 8200]
+    ]);
+
+    var newData = google.visualization.arrayToDataTable([
+      ['Name', 'Popularity'],
+      ['Phones', 5000],
+      ['Clothes', 420],
+      ['Shoes', 1000],
+      ['Clothes', 5000],
+      ['Grocery', 3000],
+      ['Toys', 10000]
+    ]);
+
+
+    var colChartBefore = new google.visualization.ColumnChart(document.getElementById('colchart_before'));
+    var colChartAfter = new google.visualization.LineChart(document.getElementById('colchart_after'));
+    var colChartDiff = new google.visualization.PieChart(document.getElementById('colchart_diff'));
+    var barChartDiff = new google.visualization.BarChart(document.getElementById('barchart_diff'));
+
+    var options = {
+      title: 'Recent visited Categories',
+      curveType: 'function',
+      legend: {
+        position: 'left'
+      },
+      width: 500,
+      height: 250
+
+    };
+
+    colChartBefore.draw(oldData, options);
+    colChartAfter.draw(newData, options);
+
+    var diffData = colChartDiff.computeDiff(oldData, newData);
+    colChartDiff.draw(diffData, options);
+    barChartDiff.draw(diffData, options);
+
+
+
+    var sellerData = google.visualization.arrayToDataTable([
+      ['Seller', 'Rating'],
+      ['Samsung', 5000],
+      ['Apple', 4200],
+      ['Xolo', 1000],
+      ['Micromax', 2500],
+      ['LG', 3000],
+      ['Motorola', 10000]
+    ]);
+    var sellersChart = new google.visualization.ColumnChart(document.getElementById('sellers_Chart'));
+    sellersChart.draw(sellerData, options);
+  }
+  </script>

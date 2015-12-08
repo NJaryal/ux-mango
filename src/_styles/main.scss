@@ -1,0 +1,57 @@
+@charset 'UTF-8';
+
+/*!
+ *
+ * DMart
+ * http://www.dmartindia.com
+ * -------------------------
+ *
+ * AUTHOR(s)
+ *
+ * Razorfish, India
+ * http://razorfish.com
+ * --------------------
+ *
+ * REFERENCES
+ *
+ * HTML, CSS and JavaScript Entities
+ * http://brajeshwar.github.io/entities/
+ *
+**/
+
+/*
+ *
+ * Tools: Default mixins and functions
+ * Settings: Global variables, config switches
+ * Generic: Ground-zero styles (Normalize, resets, box-sizing)
+ * Base: Unclassed HTML elements (type selectors)
+ * Vendor: Vendor specific files
+ * Objects: Cosmetic-free design patterns
+ * Component: Designed components, chunks of UI
+ * Theme: Component Modifiers
+ * Utilities: Helpers and overrides
+ *
+**/
+
+@import 'tools.core';
+@import 'settings.core';
+@import 'generic.core';
+@import 'base.core';
+@import 'vendor.core';
+@import 'objects.core';
+@import 'component.core';
+@import 'theme.core';
+@import 'utilities.core';
+
+
+/*
+ *
+ * You should not be seeing this.
+ *
+ * This comment is left intentionally for Infosys,
+ * to remind them that they have to compress and minify the styles during deployment.
+ *
+ * Brajeshwar
+ * http://brajeshwar.me
+ *
+**/

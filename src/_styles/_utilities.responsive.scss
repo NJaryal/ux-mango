@@ -1,0 +1,5 @@
+.respond-text-right {
+  @include media-breakpoint-up(md) {
+    text-align: right;
+  }
+}
