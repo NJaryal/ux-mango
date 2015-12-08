@@ -8,6 +8,7 @@
     });
 
     $('#Visitor').click(function(){
+      console.log('dsdfsd');
       $('.matter, #salesData, #visitedCategories, #latestCustomer, #sellerRate').css('display', 'none');
       $('#visitorsData').css('display', 'block');
     });

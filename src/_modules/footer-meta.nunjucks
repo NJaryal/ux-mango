@@ -8,6 +8,7 @@
   <script src="/{{config.baseUrl}}scripts/html5shiv.js"></script>
   <![endif]-->
   <!-- Footer ends -->
+  <script src="/{{config.baseUrl}}scripts/config.js"></script>
   <span style="display: none;" class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>
   <script src="/{{config.baseUrl}}scripts/custom.js"></script>
   <!-- endbuild -->
