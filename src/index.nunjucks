@@ -346,37 +346,37 @@
                         <th>Visits</th>
                       </tr>
                       <tr>
-                        <td><img src="Shoped Ecommerce/Icons/windows.png" alt="">
+                        <td><img src="/{{config.baseUrl}}images/windows.png" alt="">
                         </td>
                         <td>Windows 7</td>
                         <td>3,005</td>
                       </tr>
                       <tr>
-                        <td><img src="Shoped Ecommerce/Icons/android.png" alt="">
+                        <td><img src="/{{config.baseUrl}}images/android.png" alt="">
                         </td>
                         <td>Android ICS</td>
                         <td>2,505</td>
                       </tr>
                       <tr>
-                        <td><img src="Shoped Ecommerce/Icons/ios.png" alt="">
+                        <td><img src="/{{config.baseUrl}}images/ios.png" alt="">
                         </td>
                         <td>Apple IOS</td>
                         <td>1,405</td>
                       </tr>
                       <tr>
-                        <td><img src="Shoped Ecommerce/Icons/linux.png" alt="">
+                        <td><img src="/{{config.baseUrl}}images/linux.png" alt="">
                         </td>
                         <td>Linux</td>
                         <td>4,005</td>
                       </tr>
                       <tr>
-                        <td><img src="Shoped Ecommerce/Icons/mac.png" alt="">
+                        <td><img src="/{{config.baseUrl}}images/mac.png" alt="">
                         </td>
                         <td>Mac</td>
                         <td>505</td>
                       </tr>
                       <tr>
-                        <td><img src="Shoped Ecommerce/Icons/metro.png" alt="">
+                        <td><img src="/{{config.baseUrl}}images/metro.png" alt="">
                         </td>
                         <td>Windows Mobile</td>
                         <td>305</td>
@@ -414,31 +414,31 @@
                         <th>Visits</th>
                       </tr>
                       <tr>
-                        <td><img src="Shoped Ecommerce/Icons/chrome.png" alt="">
+                        <td><img src="/{{config.baseUrl}}images/chrome.png" alt="">
                         </td>
                         <td>Google Chrome</td>
                         <td>3,005</td>
                       </tr>
                       <tr>
-                        <td><img src="Shoped Ecommerce/Icons/firefox.png" alt="">
+                        <td><img src="/{{config.baseUrl}}images/firefox.png" alt="">
                         </td>
                         <td>Mozilla Firefox</td>
                         <td>2,505</td>
                       </tr>
                       <tr>
-                        <td><img src="Shoped Ecommerce/Icons/ie.png" alt="">
+                        <td><img src="/{{config.baseUrl}}images/ie.png" alt="">
                         </td>
                         <td>Internet Explorer</td>
                         <td>1,405</td>
                       </tr>
                       <tr>
-                        <td><img src="Shoped Ecommerce/Icons/opera.png" alt="">
+                        <td><img src="/{{config.baseUrl}}images/opera.png" alt="">
                         </td>
                         <td>Opera</td>
                         <td>4,005</td>
                       </tr>
                       <tr>
-                        <td><img src="Shoped Ecommerce/Icons/safari.png" alt="">
+                        <td><img src="/{{config.baseUrl}}images/safari.png" alt="">
                         </td>
                         <td>Safari</td>
                         <td>505</td>
