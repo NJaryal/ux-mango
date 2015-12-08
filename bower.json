@@ -1,5 +1,5 @@
 {
-  "name": "dmart",
+  "name": "mango",
   "version": "1.0.0",
   "homepage": "http://www.dmartindia.com/",
   "authors": [
@@ -12,7 +12,7 @@
     "node"
   ],
   "keywords": [
-    "dmart"
+    "mango"
   ],
   "license": "Commercial",
   "ignore": [
@@ -35,7 +35,8 @@
     "jquery-selectric": "~1.9.3",
     "malihu-custom-scrollbar-plugin": "~3.0.9",
     "raty": "~2.7.0",
-    "clipboard": "~1.5.5"
+    "clipboard": "~1.5.5",
+    "eonasdan-bootstrap-datetimepicker": "~4.17.37"
   },
   "resolutions": {
     "jquery": "~2.1.4"

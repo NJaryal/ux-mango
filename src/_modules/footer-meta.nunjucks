@@ -1,33 +1,16 @@
-  <!--[if lt IE 9]>
+<!-- build:js /scripts/main.js -->
+<!-- bower:js -->
+<script src="/{{config.baseUrl}}_bower_components/jquery/dist/jquery.js"></script>
+<script src="/{{config.baseUrl}}_bower_components/jquery-ui/jquery-ui.js"></script>
+<!-- endbower -->
+
+<!--[if lt IE 9]>
   <script src="/{{config.baseUrl}}scripts/html5shiv.js"></script>
   <![endif]-->
   <!-- Footer ends -->
-  <!-- Scroll to top -->
   <span style="display: none;" class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>
-  <!-- JS -->
-  <script src="/{{config.baseUrl}}scripts/jquery.js"></script>
-  <!-- jQuery -->
-  <script src="/{{config.baseUrl}}scripts/bootstrap-datetimepicker.js"></script>
-  <!-- Bootstrap -->
-  <script src="/{{config.baseUrl}}scripts/jquery-ui.js"></script>
-  <!-- jQuery UI -->
-  <script src="/{{config.baseUrl}}scripts/fullcalendar.js"></script>
-  <!-- RateIt - Star rating -->
-  <script src="/{{config.baseUrl}}scripts/jquery_009.js"></script>
-  <!-- prettyPhoto -->
-  <script src="/{{config.baseUrl}}scripts/jquery_006.js"></script>
-  <!-- jQuery Slim Scroll -->
-  <script src="/{{config.baseUrl}}scripts/jquery_012.js"></script>
-  <!-- Data tables -->
-  <script src="/{{config.baseUrl}}scripts/sparklines.js"></script>
-  <!-- Sparklines -->
-  <script src="/{{config.baseUrl}}scripts/jquery_003.js"></script>
-  <!-- CLEditor -->
-  <script src="/{{config.baseUrl}}scripts/jquery_008.js"></script>
-  <!-- Bootstrap Toggle -->
   <script src="/{{config.baseUrl}}scripts/custom.js"></script>
-  <!-- Custom codes -->
-  <script src="/{{config.baseUrl}}scripts/charts.js"></script>
+  <!-- endbuild -->
   <!-- Charts & Graphs -->
   <script type="text/javascript" src="https://www.google.com/jsapi?autoload={
             'modules':[{
