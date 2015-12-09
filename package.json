@@ -1,9 +1,8 @@
 {
-  "name": "dmart",
+  "name": "Mango",
   "version": "1.0.0",
   "private": true,
   "description": "DMart seeks to be a one-stop shopping destination for the entire family, meeting all their daily household needs.",
-  "homepage": "http://www.dmartindia.com/",
   "scripts": {
     "start": "gulp serve --open",
     "postinstall": "bower i"

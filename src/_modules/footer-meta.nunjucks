@@ -8,6 +8,7 @@
   <script src="/{{config.baseUrl}}scripts/html5shiv.js"></script>
   <![endif]-->
   <!-- Footer ends -->
+  <script src="/{{config.baseUrl}}scripts/config.js"></script>
   <span style="display: none;" class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>
   <script src="/{{config.baseUrl}}scripts/custom.js"></script>
   <!-- endbuild -->
@@ -44,7 +45,7 @@
         legend: {
           position: 'bottom'
         },
-        width: 500,
+        width: 350,
         height: 300
 
       };
@@ -81,7 +82,7 @@
         legend: {
           position: 'bottom'
         },
-        width: 500,
+        width: 350,
         height: 300
       };
 
@@ -116,7 +117,7 @@
         legend: {
           position: 'bottom'
         },
-        width: 500,
+        width: 350,
         height: 300
       };
 
@@ -153,10 +154,10 @@
 
     var newData = google.visualization.arrayToDataTable([
       ['Name', 'Popularity'],
-      ['Phones', 5000],
+      ['Phones', 3500],
       ['Clothes', 420],
       ['Shoes', 1000],
-      ['Clothes', 5000],
+      ['Clothes', 3500],
       ['Grocery', 3000],
       ['Toys', 10000]
     ]);
@@ -173,7 +174,7 @@
       legend: {
         position: 'left'
       },
-      width: 500,
+      width: 350,
       height: 250
 
     };
@@ -189,10 +190,10 @@
 
     var sellerData = google.visualization.arrayToDataTable([
       ['Seller', 'Rating'],
-      ['Samsung', 5000],
+      ['Samsung', 3500],
       ['Apple', 4200],
       ['Xolo', 1000],
-      ['Micromax', 2500],
+      ['Micromax', 2350],
       ['LG', 3000],
       ['Motorola', 10000]
     ]);
