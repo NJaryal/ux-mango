@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>{% block title %}{% endblock %} - DMart</title>
+<title>{% block title %}{% endblock %} - Resource Tracking</title>
 
 {% include "_modules/header-meta.nunjucks" %}
 

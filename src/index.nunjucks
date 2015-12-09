@@ -2,1380 +2,1501 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block content %}
-  <!-- Header starts -->
-  <header>
-    <div id="headerBackround" class="container">
-      <div class="row">
-        <!-- Logo section -->
-        <div class="col-md-4">
-          <!-- Logo. -->
-          <div class="logo">
-            <img src="/{{config.baseUrl}}images/logo.png">
-          </div>
-          <!-- Logo ends -->
+<!-- Header starts -->
+<header>
+  <div id="headerBackround" class="container">
+    <div class="row">
+      <!-- Logo section -->
+      <div class="col-md-4">
+        <!-- Logo. -->
+        <div class="logo">
+          <img src="/{{config.baseUrl}}images/logo-resource-tracking.png">
         </div>
-        <!-- Button section -->
-        <div class="col-md-4">
-          <div class="page-header">
-            <h1 style="Color:#fff; ">Resource Tracking</h1>
-          </div>
+        <!-- Logo ends -->
+      </div>
+      <!-- Button section -->
+      <div class="col-md-4">
+        <div class="page-header">
+          <h1 style="Color:#fff; ">Resource Tracking</h1>
         </div>
-        <!-- Data section -->
-        <div class="col-md-4">
-          <!-- Search form -->
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input class="form-control" placeholder="Search" type="text">
+      </div>
+      <!-- Data section -->
+      <div class="col-md-4">
+        <!-- Search form -->
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input class="form-control" placeholder="Search" type="text">
+          </div>
+        </form>
+        <!-- Links -->
+        <ul class="nav navbar-nav pull-right">
+          <li class="dropdown pull-right">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+              <i class="fa fa-user"></i><img alt="" scr="Shoped Ecommerce/user.png"> Admin <b class="caret"></b>
+            </a>
+            <!-- Dropdown menu -->
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+              <li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
+              <li><a href="http://ashobiz.asia/mac511/macadmin/login.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="header-data">
+        <!-- Traffic data -->
+        <div class="hdata">
+          <div class="mcol-left">
+            <!-- Icon with red background -->
+            <i class="fa fa-signal bred"></i>
+          </div>
+          <div class="mcol-right">
+            <!-- Number of visitors -->
+            <p><a href="#">7000</a> <em>visits</em></p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- Members data -->
+        <div class="hdata">
+          <div class="mcol-left">
+            <!-- Icon with blue background -->
+            <i class="fa fa-user bblue"></i>
+          </div>
+          <div class="mcol-right">
+            <!-- Number of visitors -->
+            <p><a href="#">3000</a> <em>users</em></p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- revenue data -->
+        <div class="hdata">
+          <div class="mcol-left">
+            <!-- Icon with green background -->
+            <i class="fa fa-money bgreen"></i>
+          </div>
+          <div class="mcol-right">
+            <!-- Number of visitors -->
+            <p><a href="#">5000</a><em>orders</em></p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</header>
+<!-- Header ends -->
+<!-- Main content starts -->
+<div class="content">
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <div class="sidebar-dropdown"><a href="#">Navigation</a></div>
+    <!--- Sidebar navigation -->
+    <!-- If the main navigation has sub navigation, then add the class "has_sub" to "li" of main navigation. -->
+    <ul id="nav">
+      <!-- Main menu with font awesome icon -->
+      <li class="open">
+        <a href="javascript:;" class="js-dashboard-cta"><i class="fa fa-home"></i>Dashboard</a>
+      </li>
+      <li>
+        <a href="javascript:;" class="js-employee-cta"><i class="fa fa-user"></i>Employee Services</a>
+      </li>
+      <li class="has_sub">
+        <a href="javascript:;" class="js-timesheet-cta"><i class="fa fa-calendar"></i>Timesheet</a>
+      </li>
+      <li class="has_sub">
+        <a href="javascript:;" class="js-allocation-cta"><i class="fa fa-check"></i>Allocation & Utilization</a>
+      </li>
+      <li class="has_sub">
+        <a href="javascript:;" class="js-hr-cta"><i class="fa fa-suitcase"></i>HR Management</a>
+      </li>
+      <li class="has_sub">
+        <a href="javascript:;" class="js-learning-cta"><i class="fa fa-bar-chart"></i>Learning & Collaboration</a>
+      </li>
+      <li class="has_sub">
+        <a href="javascript:;" class="js-infra-cta"><i class="fa fa-building"></i>Infrastructure</a>
+      </li>
+      <li class="has_sub">
+        <a href="javascript:;" class="js-opportunity-cta"><i class="fa fa-trophy"></i>Exciting Opportunities</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Sidebar ends -->
+        <!-- Main bar -->
+        <div class="mainbar">
+          <div id="dashboardContent" class="mainbar-content">
+            <!-- Page heading -->
+            <div class="page-head">
+              <h2 class="pull-left">
+                <i class="fa fa-home fa-2x"></i> Dashboard</h2>
+                <div class="clearfix"></div>
             </div>
-          </form>
-          <!-- Links -->
-          <ul class="nav navbar-nav pull-right">
-            <li class="dropdown pull-right">
-              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <i class="fa fa-user"></i><img alt="" scr="Shoped Ecommerce/user.png"> Admin <b class="caret"></b>
-              </a>
-              <!-- Dropdown menu -->
-              <ul class="dropdown-menu">
-                <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-                <li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
-                <li><a href="http://ashobiz.asia/mac511/macadmin/login.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+            <div class="dashboardContent-blurb">
+            <div class="row">
+              <div class="col-xs-12 col-md-4">
+                <div class="tile-stats tile-red">
+                  <div class="icon"><i class="fa fa-users"></i></div>
+                  <div class="num" data-start="0" data-end="83" data-postfix="" data-duration="1500" data-delay="0">33</div>
+                  <h3>Design</h3>
+                  <p>Ux and princinples.</p>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-4">
+
+                <div class="tile-stats tile-green">
+                  <div class="icon"><i class="fa fa-bar-chart"></i></div>
+                  <div class="num" data-start="0" data-end="135" data-postfix="" data-duration="1500" data-delay="600">105</div>
+                  <h3>Development</h3>
+                  <p>you got technical stuff here.</p>
+                </div>
+
+              </div>
+              <div class="col-xs-12 col-md-4">
+                <div class="tile-stats tile-aqua">
+                  <div class="icon">
+                    <i class="fa fa-envelope"></i></div>
+                    <div class="num" data-start="0" data-end="23" data-postfix="" data-duration="1500" data-delay="1200">23</div>
+                    <h3><a href="javascript:;" class="js-timesheet-cta"></a>Timesheet</h3>
+                    <p>So you get salary.</p>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 col-md-4">
+
+                <div class="tile-stats tile-blue">
+                  <div class="icon">
+                    <i class="fa fa-rss"></i></div>
+                    <div class="num" data-start="0" data-end="52" data-postfix="" data-duration="1500" data-delay="1800">18</div>
+                    <h3>Architecture</h3>
+                    <p>where you can master.</p>
+                </div>
+
+              </div>
+              <div class="col-xs-12 col-md-4">
+
+                <div class="tile-stats tile-green">
+                  <div class="icon"><i class="fa fa-bar-chart"></i></div>
+                  <div class="num" data-start="0" data-end="135" data-postfix="" data-duration="1500" data-delay="600">105</div>
+                  <h3>Development</h3>
+                  <p>you got technical stuff here.</p>
+                </div>
+
+              </div>
+              <div class="col-xs-12 col-md-4">
+                <div class="tile-stats tile-aqua">
+                  <div class="icon">
+                    <i class="fa fa-envelope"></i></div>
+                    <div class="num" data-start="0" data-end="23" data-postfix="" data-duration="1500" data-delay="1200">23</div>
+                    <h3>Management</h3>
+                    <p>where communication comes.</p>
+                  </div>
+              </div>
+            </div>
+            </div>
+
+        </div>
+            <!-- Page heading ends -->
+            <!--  Visitors Data -->
+            <div id="learningContent" style="display: none;" class="mainbar-content">
+              <!-- Page heading -->
+              <div class="page-head">
+                <h2 class="pull-left">
+                  <i class="fa fa-user"></i> Learning &amp; Collaboration</h2>
+                  <div class="clearfix"></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3 col-xs-6">
+                  <div class="tile-stats tile-red">
+                    <div class="icon"><i class="fa fa-users"></i></div>
+                    <div class="num" data-start="0" data-end="83" data-postfix="" data-duration="1500" data-delay="0">33</div>
+                    <h3>Design</h3>
+                    <p>Ux and princinples.</p>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <div class="tile-stats tile-green">
+                    <div class="icon"><i class="fa fa-bar-chart"></i></div>
+                    <div class="num" data-start="0" data-end="135" data-postfix="" data-duration="1500" data-delay="600">105</div>
+                    <h3>Development</h3>
+                    <p>you got technical stuff here.</p>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <div class="tile-stats tile-aqua">
+                    <div class="icon">
+                      <i class="fa fa-envelope"></i></div>
+                      <div class="num" data-start="0" data-end="23" data-postfix="" data-duration="1500" data-delay="1200">23</div>
+                      <h3>Management</h3>
+                      <p>where communication comes.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <div class="tile-stats tile-blue">
+                    <div class="icon">
+                      <i class="fa fa-rss"></i></div>
+                      <div class="num" data-start="0" data-end="52" data-postfix="" data-duration="1500" data-delay="1800">18</div>
+                      <h3>Architecture</h3>
+                      <p>where you can master.</p>
+                    </div>
+                </div>
+              </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <!-- Widget -->
+                      <div class="widget">
+                        <!-- Widget head -->
+                        <div class="widget-head">
+                          <div class="pull-left">Basic Competencies</div>
+                          <div class="widget-icons pull-right">
+                            <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+                            <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                        <!-- Widget content -->
+                        <div class="widget-content clearfix">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="panel panel-primary"> <div class="panel-heading"> <h3 class="panel-title">Designer</h3> </div> <div class="panel-body"> <ul class="list-group">
+                              <li class="list-group-item">Adobe Photoshop</li>
+                              <li class="list-group-item">Sketch</li>
+                              <li class="list-group-item">Illustrator</li>
+                              <li class="list-group-item">Design Principles</li>
+                            </ul> </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="panel panel-primary"> <div class="panel-heading"> <h3 class="panel-title">Presentation Layer Developer</h3> </div> <div class="panel-body">
+                          <ul class="list-group">
+                          <li class="list-group-item">HTML5</li>
+                          <li class="list-group-item">javascript</li>
+                          <li class="list-group-item">CSS3</li>
+                          <li class="list-group-item">Sass + Less</li>
+                        </ul> </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="panel panel-primary"> <div class="panel-heading"> <h3 class="panel-title">Backend Developer</h3> </div> <div class="panel-body"> <ul class="list-group">
+                      <li class="list-group-item">Java</li>
+                      <li class="list-group-item">spring</li>
+                      <li class="list-group-item">.Net</li>
+                      <li class="list-group-item">PHP</li>
+                    </ul> </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="panel panel-primary"> <div class="panel-heading"> <h3 class="panel-title">Quality Analyst</h3> </div> <div class="panel-body"> <ul class="list-group">
+                  <li class="list-group-item">Unit Testing</li>
+                  <li class="list-group-item">Manual testing</li>
+                  <li class="list-group-item">Automated</li>
+                  <li class="list-group-item">Regression</li>
+                </ul> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Operating System -->
+    <div class="col-md-6">
+      <div class="widget">
+        <!-- Widget title -->
+        <div class="widget-head">
+          <div class="pull-left">Operating System</div>
+          <div class="widget-icons pull-right">
+            <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+            <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="widget-content referrer">
+          <!-- Widget content -->
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+              <tbody>
+                <tr>
+                  <th>
+                    <center>#</center>
+                  </th>
+                  <th>Operating System</th>
+                  <th>Employees</th>
+                </tr>
+                <tr>
+                  <td><img src="/{{config.baseUrl}}images/windows.png" alt="">
+                  </td>
+                  <td>Windows 7</td>
+                  <td>105</td>
+                </tr>
+                <tr>
+                  <td><img src="/{{config.baseUrl}}images/android.png" alt="">
+                  </td>
+                  <td>Android</td>
+                  <td>2,000</td>
+                </tr>
+                <tr>
+                  <td><img src="/{{config.baseUrl}}images/ios.png" alt="">
+                  </td>
+                  <td>Apple iOS</td>
+                  <td>1,405</td>
+                </tr>
+                <tr>
+                  <td><img src="/{{config.baseUrl}}images/linux.png" alt="">
+                  </td>
+                  <td>Linux</td>
+                  <td>705</td>
+                </tr>
+                <tr>
+                  <td><img src="/{{config.baseUrl}}images/mac.png" alt="">
+                  </td>
+                  <td>Mac</td>
+                  <td>1000</td>
+                </tr>
+                <tr>
+                  <td><img src="/{{config.baseUrl}}images/metro.png" alt="">
+                  </td>
+                  <td>Windows Mobile</td>
+                  <td>305</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="widget-foot">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Browsers -->
+    <div class="col-md-6">
+      <div class="widget">
+        <!-- Widget title -->
+        <div class="widget-head">
+          <div class="pull-left">Browsers</div>
+          <div class="widget-icons pull-right">
+            <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+            <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="widget-content clearfix">
+          <!-- Widget content -->
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+              <tbody>
+                <tr>
+                  <th>
+                    <center>#</center>
+                  </th>
+                  <th>Browsers</th>
+                  <th>Users</th>
+                </tr>
+                <tr>
+                  <td><img src="/{{config.baseUrl}}images/chrome.png" alt="">
+                  </td>
+                  <td>Google Chrome</td>
+                  <td>3,005</td>
+                </tr>
+                <tr>
+                  <td><img src="/{{config.baseUrl}}images/firefox.png" alt="">
+                  </td>
+                  <td>Mozilla Firefox</td>
+                  <td>2,505</td>
+                </tr>
+                <tr>
+                  <td><img src="/{{config.baseUrl}}images/ie.png" alt="">
+                  </td>
+                  <td>Internet Explorer</td>
+                  <td>1,405</td>
+                </tr>
+                <tr>
+                  <td><img src="/{{config.baseUrl}}images/opera.png" alt="">
+                  </td>
+                  <td>Opera</td>
+                  <td>1,005</td>
+                </tr>
+                <tr>
+                  <td><img src="/{{config.baseUrl}}images/safari.png" alt="">
+                  </td>
+                  <td>Safari</td>
+                  <td>505</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="widget-foot">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Visitors Data End here -->
+<!-- Sales Data-->
+<div class="row mainbar-content" id="timesheetContent" style="display: none;">
+  <!-- Page heading -->
+  <div class="page-head">
+    <h2 class="pull-left">
+      <i class="fa fa-calendar fa-2x"></i> Timesheet</h2>
+      <div class="clearfix"></div>
+  </div>
+  <div class="secondary-stat">
+    <div class="row">
+      <div class="col-lg-4">
+        <div id="secondary-stat-item1" class="secondary-stat-item big-number-stat clearfix">
+          <div class="data">
+            <span class="col-left big-number">260</span>
+            <span class="col-right"><em>New Orders</em><em>3% <i class="fa fa-caret-down"></i></em></span>
+          </div>
+          <div id="spark-stat1" class="inlinesparkline">
+            <canvas width="327" height="60" style="display: inline-block; vertical-align: top; width: 327px; height: 60px;"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div id="secondary-stat-item2" class="secondary-stat-item big-number-stat clearfix">
+          <p class="data">
+            <span class="col-left big-number">$23,000</span>
+            <span class="col-right"><em>Revenue</em><em>5% <i class="fa fa-caret-up"></i></em></span>
+          </p>
+          <div id="spark-stat2" class="inlinesparkline">
+            <canvas width="327" height="60" style="display: inline-block; vertical-align: top; width: 327px; height: 60px;"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div id="secondary-stat-item3" class="secondary-stat-item big-number-stat clearfix">
+          <p class="data">
+            <span class="col-left big-number">$47,000</span>
+            <span class="col-right"><em>Total Sales</em><em>7% <i class="fa fa-caret-up"></i></em></span>
+          </p>
+          <div id="spark-stat3" class="inlinesparkline">
+            <canvas width="327" height="60" style="display: inline-block; vertical-align: top; width: 327px; height: 60px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end secondary stat -->
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Widget -->
+      <div class="widget">
+        <!-- Widget head -->
+        <div class="widget-head">
+          <div class="pull-left">Statistics</div>
+          <div class="widget-icons pull-right">
+            <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+            <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- Widget content -->
+        <div class="widget-content">
+          <div class="graphData">
+            <span class="daily">Daily</span>
+            <span class="monthly">Monthly</span>
+            <span class="yearly">Yearly</span>
+            <div id="curve_chart">
+              <div style="position: relative;">
+                <div dir="ltr" style="position: relative; width: 500px; height: 300px;">
+                  <div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
+                    <svg width="500" height="300" aria-label="A chart." style="overflow: hidden;">
+                      <defs id="defs">
+                        <clipPath id="_ABSTRACT_RENDERER_ID_2">
+                          <rect x="94" y="58" width="313" height="185"></rect>
+                        </clipPath>
+                      </defs>
+                      <rect x="0" y="0" width="500" height="300" stroke="none" stroke-width="0" fill="#ffffff"></rect>
+                      <g>
+                        <text text-anchor="start" x="94" y="37.2" font-family="Arial" font-size="12" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Statistics</text>
+                      </g>
+                      <g>
+                        <rect x="242" y="275" width="12" height="12" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+                        <g>
+                          <rect x="242" y="275" width="12" height="12" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+                          <g>
+                            <text text-anchor="start" x="259" y="285.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">Daily</text>
+                          </g>
+                          <rect x="242" y="275" width="12" height="12" stroke="none" stroke-width="0" fill="#3366cc"></rect>
+                        </g>
+                      </g>
+                      <g>
+                        <rect x="94" y="58" width="313" height="185" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
+                        <g clip-path="url(#_ABSTRACT_RENDERER_ID_2)">
+                          <g>
+                            <rect x="94" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+                            <rect x="172" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+                            <rect x="250" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+                            <rect x="328" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+                            <rect x="406" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#cccccc"></rect>
+                          </g>
+                          <g>
+                            <rect x="95" y="63" width="30" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
+                            <rect x="95" y="89" width="33" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
+                            <rect x="95" y="116" width="205" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
+                            <rect x="95" y="142" width="311" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
+                            <rect x="95" y="168" width="30" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
+                            <rect x="95" y="195" width="33" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
+                            <rect x="95" y="221" width="205" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
+                          </g>
+                          <g>
+                            <rect x="94" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#333333"></rect>
+                          </g>
+                        </g>
+                        <g></g>
+                        <g>
+                          <g>
+                            <text text-anchor="middle" x="94.5" y="260.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444">0</text>
+                          </g>
+                          <g>
+                            <text text-anchor="middle" x="172.5" y="260.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444">25</text>
+                          </g>
+                          <g>
+                            <text text-anchor="middle" x="250.5" y="260.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444">50</text>
+                          </g>
+                          <g>
+                            <text text-anchor="middle" x="328.5" y="260.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444">75</text>
+                          </g>
+                          <g>
+                            <text text-anchor="middle" x="406.5" y="260.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444">100</text>
+                          </g>
+                          <g>
+                            <text text-anchor="end" x="82" y="75.84285714285714" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">29-07-15</text>
+                          </g>
+                          <g>
+                            <text text-anchor="end" x="82" y="102.12857142857143" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">30-07-15</text>
+                          </g>
+                          <g>
+                            <text text-anchor="end" x="82" y="128.4142857142857" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">01-07-15</text>
+                          </g>
+                          <g>
+                            <text text-anchor="end" x="82" y="154.7" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">02-07-15</text>
+                          </g>
+                          <g>
+                            <text text-anchor="end" x="82" y="180.98571428571427" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">03-07-15</text>
+                          </g>
+                          <g>
+                            <text text-anchor="end" x="82" y="207.27142857142854" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">04-07-15</text>
+                          </g>
+                          <g>
+                            <text text-anchor="end" x="82" y="233.55714285714285" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">05-07-15</text>
+                          </g>
+                        </g>
+                      </g>
+                      <g></g>
+                    </svg>
+                    <div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Dates</th>
+                            <th>Daily</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>29-07-15</td>
+                            <td>10</td>
+                          </tr>
+                          <tr>
+                            <td>30-07-15</td>
+                            <td>11</td>
+                          </tr>
+                          <tr>
+                            <td>01-07-15</td>
+                            <td>66</td>
+                          </tr>
+                          <tr>
+                            <td>02-07-15</td>
+                            <td>100</td>
+                          </tr>
+                          <tr>
+                            <td>03-07-15</td>
+                            <td>10</td>
+                          </tr>
+                          <tr>
+                            <td>04-07-15</td>
+                            <td>11</td>
+                          </tr>
+                          <tr>
+                            <td>05-07-15</td>
+                            <td>66</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div aria-hidden="true" style="display: none; position: absolute; top: 310px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 12px;">Daily</div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- WIDGET TABLE -->
+      <div class="widget widget-table">
+        <div class="widget-header">
+          <h3><i class="fa fa-desktop"></i> Browser &amp; OS</h3>
+          <div class="btn-group widget-header-toolbar">
+            <a href="#" title="Focus" class="btn-borderless btn-focus"><i class="fa fa-eye"></i></a>
+            <a href="#" title="Expand/Collapse" class="btn-borderless btn-toggle-expand"><i class="fa fa-chevron-up"></i></a>
+            <a href="#" title="Remove" class="btn-borderless btn-remove"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="btn-group widget-header-toolbar">
+            <div class="control-inline toolbar-item-group">
+              <span class="control-title">New Visits:</span>
+              <div class="label label-success"><i class="fa fa-caret-up"></i> 3.5%</div>
+            </div>
+          </div>
+        </div>
+        <div class="widget-content">
+          <div id="visit-stat-table_wrapper" class="dataTables_wrapper form-inline no-footer">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="dataTables_length" id="visit-stat-table_length">
+                  <label>
+                    <select name="visit-stat-table_length" aria-controls="visit-stat-table" class="form-control input-sm">
+                      <option value="10">10</option>
+                      <option value="25">25</option>
+                      <option value="50">50</option>
+                      <option value="100">100</option>
+                    </select> records per page</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div id="visit-stat-table_filter" class="dataTables_filter">
+                    <label>Search:
+                      <input type="search" class="form-control input-sm" placeholder="" aria-controls="visit-stat-table">
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <table id="visit-stat-table" class="table table-sorting table-striped table-hover datatable dataTable no-footer" role="grid" aria-describedby="visit-stat-table_info">
+                <thead>
+                  <tr role="row">
+                    <th class="sorting_asc" tabindex="0" aria-controls="visit-stat-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Browser: activate to sort column descending" style="width: 124px;">Browser</th>
+                    <th class="sorting" tabindex="0" aria-controls="visit-stat-table" rowspan="1" colspan="1" aria-label="Operating System: activate to sort column ascending" style="width: 146px;">Operating System</th>
+                    <th class="sorting" tabindex="0" aria-controls="visit-stat-table" rowspan="1" colspan="1" aria-label="Visits: activate to sort column ascending" style="width: 55px;">Visits</th>
+                    <th class="sorting" tabindex="0" aria-controls="visit-stat-table" rowspan="1" colspan="1" aria-label="New Visits: activate to sort column ascending" style="width: 93px;">New Visits</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Chrome</td>
+                    <td>Macintosh</td>
+                    <td>360</td>
+                    <td>82.78%</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Chrome</td>
+                    <td>Windows</td>
+                    <td>582</td>
+                    <td>87.24%</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Chrome</td>
+                    <td>Linux</td>
+                    <td>172</td>
+                    <td>45.21%</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Chrome</td>
+                    <td>iOS</td>
+                    <td>86</td>
+                    <td>35.23%</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Chrome</td>
+                    <td>iOS</td>
+                    <td>45</td>
+                    <td>23.21%</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Firefox</td>
+                    <td>Windows</td>
+                    <td>280</td>
+                    <td>63.12%</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Firefox</td>
+                    <td>Android</td>
+                    <td>236</td>
+                    <td>58.02%</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Firefox</td>
+                    <td>Windows</td>
+                    <td>67</td>
+                    <td>27.11%</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">Internet Explorer</td>
+                    <td>Windows</td>
+                    <td>145</td>
+                    <td>45.23%</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">Opera</td>
+                    <td>Windows</td>
+                    <td>328</td>
+                    <td>67.12%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="dataTables_info" id="visit-stat-table_info" role="status" aria-live="polite">Showing 1 to 10 of 13 entries</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="dataTables_paginate paging_simple_numbers" id="visit-stat-table_paginate">
+                    <ul class="pagination">
+                      <li class="paginate_button previous disabled" aria-controls="visit-stat-table" tabindex="0" id="visit-stat-table_previous"><a href="#">Previous</a></li>
+                      <li class="paginate_button active" aria-controls="visit-stat-table" tabindex="0"><a href="#">1</a></li>
+                      <li class="paginate_button " aria-controls="visit-stat-table" tabindex="0"><a href="#">2</a></li>
+                      <li class="paginate_button next" aria-controls="visit-stat-table" tabindex="0" id="visit-stat-table_next"><a href="#">Next</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END WIDGET TABLE -->
+      </div>
+    </div>
+  </div>
+  <!-- Sales Data Ends here -->
+  <!-- Newly Registered Customers -->
+  <div id="allocationContent" style="display: none;" class="mainbar-content">
+    <!-- Page heading -->
+    <div class="page-head">
+      <h2 class="pull-left">
+        <i class="fa fa-check fa-2x"></i> Allocation &amp; Utilization</h2>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="widget">
+          <div class="widget-head">
+            <div class="pull-left">List of latest customers</div>
+            <div class="widget-icons pull-right">
+              <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+              <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="widget-content clearfix">
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>Region</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ravi Kumar</td>
+                    <td>India</td>
+                    <td>23/12/2012</td>
+                    <td><span class="label label-success">New User</span></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Parneethi Chopra</td>
+                    <td>USA</td>
+                    <td>13/02/2012</td>
+                    <td><span class="label label-success">New User</span></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Kumar Ragu</td>
+                    <td>Japan</td>
+                    <td>12/03/2012</td>
+                    <td><span class="label label-success">New User</span></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Vishnu Vardan</td>
+                    <td>Bangkok</td>
+                    <td>03/11/2012</td>
+                    <td><span class="label label-success">New User</span></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Anuksha Sharma</td>
+                    <td>Singapore</td>
+                    <td>13/32/2012</td>
+                    <td><span class="label label-success">New User</span></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Vikas Jaiswal</td>
+                    <td>London</td>
+                    <td>13/32/2012</td>
+                    <td><span class="label label-success">New User</span></td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Virat</td>
+                    <td>Canada</td>
+                    <td>13/32/2012</td>
+                    <td><span class="label label-success">New User</span></td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Messy</td>
+                    <td>Barcelona</td>
+                    <td>13/32/2012</td>
+                    <td><span class="label label-success">New User</span></td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Rohit Sharma</td>
+                    <td>Bankong</td>
+                    <td>13/32/2012</td>
+                    <td><span class="label label-success">New User</span></td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Nitin jaryal</td>
+                    <td>Australia</td>
+                    <td>13/32/2012</td>
+                    <td><span class="label label-success">New User</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="widget-foot">
+              <ul class="pagination pagination-sm pull-right">
+                <li><a href="#">Prev</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">Next</a></li>
               </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Newly Registered Customers end here -->
+  <!-- Best Sellers With Rating -->
+  <div id="hrManageContent" style="display: none;" class="mainbar-content">
+    <!-- Page heading -->
+    <div class="page-head">
+      <h2 class="pull-left">
+        <i class="fa fa-calendar fa-2x"></i> HR Management</h2>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="widget">
+          <div class="widget-head">
+            <div class="pull-left">List of latest customers</div>
+            <div class="widget-icons pull-right">
+              <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+              <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="widget-content">
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>S.No.</th>
+                    <th>Name of Seller</th>
+                    <th>Date</th>
+                    <th>Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Samsung</td>
+                    <td>23/12/2012</td>
+                    <td><span class="label label-success">5000</span></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Apple</td>
+                    <td>13/02/2012</td>
+                    <td><span class="label label-success">4200</span></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Xolo</td>
+                    <td>12/03/2012</td>
+                    <td><span class="label label-success">1000</span></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Micromax</td>
+                    <td>03/11/2012</td>
+                    <td><span class="label label-success">2500</span></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>LG</td>
+                    <td>13/32/2012</td>
+                    <td><span class="label label-success">3000</span></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Motoral</td>
+                    <td>13/32/2012</td>
+                    <td><span class="label label-success">10000</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="widget-foot">
+              <ul class="pagination pagination-sm pull-right">
+                <li><a href="#">Prev</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">Next</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="widget">
+          <div class="widget-head">
+            <div class="pull-left">Best Sellers</div>
+            <div class="widget-icons pull-right">
+              <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+              <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="widget-content">
+            <span id="sellers_Chart" style="width: 450px; height: 250px; display: inline-block"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 500px; height: 250px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="500" height="250" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_13"><rect x="84" y="48" width="333" height="155"></rect></clipPath></defs><rect x="0" y="0" width="500" height="250" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="84" y="28.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Recent visited Categories</text></g><g><rect x="84" y="48" width="333" height="155" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_13)"><g><rect x="84" y="202" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="164" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="125" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="87" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="48" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="95" y="126" width="34" height="76" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="150" y="138" width="34" height="64" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="205" y="188" width="34" height="14" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="261" y="165" width="34" height="37" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="316" y="157" width="34" height="45" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="371" y="49" width="34" height="153" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="84" y="202" width="333" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="112.16666666666667" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Samsung</text></g><g><text text-anchor="middle" x="167.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Apple</text></g><g><text text-anchor="middle" x="222.83333333333334" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Xolo</text></g><g><text text-anchor="middle" x="278.1666666666667" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Micromax</text></g><g><text text-anchor="middle" x="333.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">LG</text></g><g><text text-anchor="middle" x="388.83333333333337" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Motorola</text></g><g><text text-anchor="end" x="73" y="206.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="73" y="167.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">2,500</text></g><g><text text-anchor="end" x="73" y="129.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">5,000</text></g><g><text text-anchor="end" x="73" y="90.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">7,500</text></g><g><text text-anchor="end" x="73" y="52.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">10,000</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Seller</th><th>Rating</th></tr></thead><tbody><tr><td>Samsung</td><td>5000</td></tr><tr><td>Apple</td><td>4200</td></tr><tr><td>Xolo</td><td>1000</td></tr><tr><td>Micromax</td><td>2500</td></tr><tr><td>LG</td><td>3000</td></tr><tr><td>Motorola</td><td>10000</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 260px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">Recent visited Categories</div><div></div></div></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Best Sellers With Rating ends here -->
+  <!-- Matter -->
+  <div id="employeeServicesContent" style="display: none;" class="mainbar-content">
+
+  <!-- Page heading -->
+  <div class="page-head">
+    <h2 class="pull-left">
+      <i class="fa fa-user fa-2x"></i> Employee Services</h2>
+      <div class="clearfix"></div>
+  </div>
+
+    <div class="container">
+      <!-- Today status. jQuery Sparkline plugin used. -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- List starts -->
+          <ul class="today-datas">
+            <!-- List #1 -->
+            <li>
+              <!-- Graph -->
+              <div><span id="todayspark1" class="spark"><canvas width="77" height="30" style="display: inline-block; width: 77px; height: 30px; vertical-align: top;"></canvas></span></div>
+              <!-- Text -->
+              <div class="datas-text">12,000 visitors/day</div>
+            </li>
+            <li>
+              <div><span id="todayspark2" class="spark"><canvas width="77" height="30" style="display: inline-block; width: 77px; height: 30px; vertical-align: top;"></canvas></span></div>
+              <div class="datas-text">30,000 Pageviews</div>
+            </li>
+            <li>
+              <div><span id="todayspark3" class="spark"><canvas width="77" height="30" style="display: inline-block; width: 77px; height: 30px; vertical-align: top;"></canvas></span></div>
+              <div class="datas-text">15.66% Bounce Rate</div>
+            </li>
+            <li>
+              <div><span id="todayspark4" class="spark"><canvas width="77" height="30" style="display: inline-block; width: 77px; height: 30px; vertical-align: top;"></canvas></span></div>
+              <div class="datas-text">$12,000 Revenue/Day</div>
+            </li>
+            <li>
+              <div><span id="todayspark5" class="spark"><canvas width="250" height="30" style="display: inline-block; width: 250px; height: 30px; vertical-align: top;"></canvas></span></div>
+              <div class="datas-text">15,000000 visitors till date</div>
             </li>
           </ul>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <div class="header-data">
-          <!-- Traffic data -->
-          <div class="hdata">
-            <div class="mcol-left">
-              <!-- Icon with red background -->
-              <i class="fa fa-signal bred"></i>
+      <!-- Today status ends -->
+      <!-- Dashboard Graph starts -->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="widget">
+            <div class="widget-head">
+              <div class="pull-left">My Info</div>
+              <div class="widget-icons pull-right">
+                <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+                <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+              </div>
+              <div class="clearfix"></div>
             </div>
-            <div class="mcol-right">
-              <!-- Number of visitors -->
-              <p><a href="#">7000</a> <em>visits</em></p>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-          <!-- Members data -->
-          <div class="hdata">
-            <div class="mcol-left">
-              <!-- Icon with blue background -->
-              <i class="fa fa-user bblue"></i>
-            </div>
-            <div class="mcol-right">
-              <!-- Number of visitors -->
-              <p><a href="#">3000</a> <em>users</em></p>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-          <!-- revenue data -->
-          <div class="hdata">
-            <div class="mcol-left">
-              <!-- Icon with green background -->
-              <i class="fa fa-money bgreen"></i>
-            </div>
-            <div class="mcol-right">
-              <!-- Number of visitors -->
-              <p><a href="#">5000</a><em>orders</em></p>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </div>
-        <div class="col-md-4"></div>
-      </div>
-    </div>
-  </header>
-  <!-- Header ends -->
-  <!-- Main content starts -->
-  <div class="content">
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
-      <div class="sidebar-dropdown"><a href="#">Navigation</a></div>
-      <!--- Sidebar navigation -->
-      <!-- If the main navigation has sub navigation, then add the class "has_sub" to "li" of main navigation. -->
-      <ul id="nav">
-        <!-- Main menu with font awesome icon -->
-        <li class="open">
-          <a href="javascript:;" id="dashBoard"><i class="fa fa-user"></i> Employee Services </a>
-        </li>
-        <li class="has_sub">
-          <a href="javascript:;" id="Visitor"><i class="fa fa-bar-chart"></i> Learning & Collaboration </a>
-        </li>
-        <li class="has_sub">
-          <a href="javascript:;" id="Sales"><i class="fa fa-calendar"></i> Timesheet <span></span></a>
-        </li>
-        <li class="has_sub">
-          <a href="javascript:;" id="customersData"><i class="fa fa-users"></i>Allocation & Utilization</a>
-        </li>
-        <li class="has_sub">
-          <a href="javascript:;" id="bestSeller"><i class="fa fa-suitcase"></i> HR Management </a></li>
-        <li class="has_sub">
-          <a href="javascript:;" id="incompleteOrders"><i class="fa fa-building"></i>Infrastructure </a></li>
-        <li class="has_sub">
-          <a href="javascript:;" id="mostVisited"><i class="fa fa-trophy"></i> Exciting Opportunities </a> </li>
-      </ul>
-    </div>
-    <!-- Sidebar ends -->
-    <!-- Main bar -->
-    <div class="mainbar">
-      <!-- Page heading -->
-      <div class="page-head">
-        <h2 class="pull-left">
-        <i class="fa fa-home">
-        </i> Dashboard</h2>
-        <div class="clearfix"></div>
-      </div>
-      <!-- Page heading ends -->
-      <!--  Visitors Data -->
-      <div id="visitorsData" style="display: none;">
-        <div class="row">
-          <div class="col-sm-3 col-xs-6">
-            <div class="tile-stats tile-red">
-              <div class="icon"><i class="fa fa-users"></i></div>
-              <div class="num" data-start="0" data-end="83" data-postfix="" data-duration="1500" data-delay="0">33</div>
-              <h3>Design</h3>
-              <p>Ux and princinples.</p>
-            </div>
-          </div>
-          <div class="col-sm-3 col-xs-6">
-            <div class="tile-stats tile-green">
-              <div class="icon"><i class="fa fa-bar-chart"></i></div>
-              <div class="num" data-start="0" data-end="135" data-postfix="" data-duration="1500" data-delay="600">105</div>
-              <h3>Development</h3>
-              <p>you got technical stuff here.</p>
-            </div>
-          </div>
-          <div class="col-sm-3 col-xs-6">
-            <div class="tile-stats tile-aqua">
-              <div class="icon">
-                <i class="fa fa-envelope"></i></div>
-              <div class="num" data-start="0" data-end="23" data-postfix="" data-duration="1500" data-delay="1200">23</div>
-              <h3>Management</h3>
-              <p>where communication comes.</p>
-            </div>
-          </div>
-          <div class="col-sm-3 col-xs-6">
-            <div class="tile-stats tile-blue">
-              <div class="icon">
-                <i class="fa fa-rss"></i></div>
-              <div class="num" data-start="0" data-end="52" data-postfix="" data-duration="1500" data-delay="1800">18</div>
-              <h3>Architecture</h3>
-              <p>where you can master.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- Widget -->
-            <div class="widget">
-              <!-- Widget head -->
-              <div class="widget-head">
-                <div class="pull-left">Basic Competencies</div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <!-- Widget content -->
-              <div class="widget-content clearfix">
-
-              <div class="col-md-6">
-
-                  <div class="panel panel-primary"> <div class="panel-heading"> <h3 class="panel-title">Designer</h3> </div> <div class="panel-body"> <ul class="list-group">
-                <li class="list-group-item">Adobe Photoshop</li>
-                <li class="list-group-item">Sketch</li>
-                <li class="list-group-item">Illustrator</li>
-                <li class="list-group-item">Design Principles</li>
-              </ul> </div>
-              </div>
-              </div>
-
-              <div class="col-md-6">
-
-                   <div class="panel panel-primary"> <div class="panel-heading"> <h3 class="panel-title">Presentation Layer Developer</h3> </div> <div class="panel-body"> <ul class="list-group">
-                <li class="list-group-item">HTML5</li>
-                <li class="list-group-item">javascript</li>
-                <li class="list-group-item">CSS3</li>
-                <li class="list-group-item">Sass + Less</li>
-              </ul> </div>
-              </div>
-
-              </div>
-
-              <div class="col-md-6">
-
-                            <div class="panel panel-primary"> <div class="panel-heading"> <h3 class="panel-title">Backend Developer</h3> </div> <div class="panel-body"> <ul class="list-group">
-                <li class="list-group-item">Java</li>
-                <li class="list-group-item">spring</li>
-                <li class="list-group-item">.Net</li>
-                <li class="list-group-item">PHP</li>
-              </ul> </div>
-              </div>
-
-              </div>
-
-              <div class="col-md-6">
-
-                            <div class="panel panel-primary"> <div class="panel-heading"> <h3 class="panel-title">Quality Analyst</h3> </div> <div class="panel-body"> <ul class="list-group">
-                <li class="list-group-item">Unit Testing</li>
-                <li class="list-group-item">Manual testing</li>
-                <li class="list-group-item">Automated</li>
-                <li class="list-group-item">Regression</li>
-              </ul> </div>
-              </div>
-
-              </div>
-
-
-          <!-- Operating System -->
-          <div class="col-md-6">
-            <div class="widget">
-              <!-- Widget title -->
-              <div class="widget-head">
-                <div class="pull-left">Operating System</div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="widget-content referrer">
-                <!-- Widget content -->
-                <div class="table-responsive">
-                  <table class="table table-striped table-bordered table-hover">
-                    <tbody>
-                      <tr>
-                        <th>
-                          <center>#</center>
-                        </th>
-                        <th>Operating System</th>
-                        <th>Employees</th>
-                      </tr>
-                      <tr>
-                        <td><img src="/{{config.baseUrl}}images/windows.png" alt="">
-                        </td>
-                        <td>Windows 7</td>
-                        <td>105</td>
-                      </tr>
-                      <tr>
-                        <td><img src="/{{config.baseUrl}}images/android.png" alt="">
-                        </td>
-                        <td>Android</td>
-                        <td>2,000</td>
-                      </tr>
-                      <tr>
-                        <td><img src="/{{config.baseUrl}}images/ios.png" alt="">
-                        </td>
-                        <td>Apple iOS</td>
-                        <td>1,405</td>
-                      </tr>
-                      <tr>
-                        <td><img src="/{{config.baseUrl}}images/linux.png" alt="">
-                        </td>
-                        <td>Linux</td>
-                        <td>705</td>
-                      </tr>
-                      <tr>
-                        <td><img src="/{{config.baseUrl}}images/mac.png" alt="">
-                        </td>
-                        <td>Mac</td>
-                        <td>1000</td>
-                      </tr>
-                      <tr>
-                        <td><img src="/{{config.baseUrl}}images/metro.png" alt="">
-                        </td>
-                        <td>Windows Mobile</td>
-                        <td>305</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="widget-foot">
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Browsers -->
-          <div class="col-md-6">
-            <div class="widget">
-              <!-- Widget title -->
-              <div class="widget-head">
-                <div class="pull-left">Browsers</div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="widget-content referrer">
-                <!-- Widget content -->
-                <div class="table-responsive">
-                  <table class="table table-striped table-bordered table-hover">
-                    <tbody>
-                      <tr>
-                        <th>
-                          <center>#</center>
-                        </th>
-                        <th>Browsers</th>
-                        <th>Users</th>
-                      </tr>
-                      <tr>
-                        <td><img src="/{{config.baseUrl}}images/chrome.png" alt="">
-                        </td>
-                        <td>Google Chrome</td>
-                        <td>3,005</td>
-                      </tr>
-                      <tr>
-                        <td><img src="/{{config.baseUrl}}images/firefox.png" alt="">
-                        </td>
-                        <td>Mozilla Firefox</td>
-                        <td>2,505</td>
-                      </tr>
-                      <tr>
-                        <td><img src="/{{config.baseUrl}}images/ie.png" alt="">
-                        </td>
-                        <td>Internet Explorer</td>
-                        <td>1,405</td>
-                      </tr>
-                      <tr>
-                        <td><img src="/{{config.baseUrl}}images/opera.png" alt="">
-                        </td>
-                        <td>Opera</td>
-                        <td>1,005</td>
-                      </tr>
-                      <tr>
-                        <td><img src="/{{config.baseUrl}}images/safari.png" alt="">
-                        </td>
-                        <td>Safari</td>
-                        <td>505</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="widget-foot">
-                </div>
-              </div>
-            </div>
-          </div>
-
-    </div>
-          </div>
-        </div>
-      </div>
-      <!-- Visitors Data End here -->
-      <!-- Sales Data-->
-      <div class="row" id="salesData" style="display: none;">
-        <div class="secondary-stat">
-          <div class="row">
-            <div class="col-lg-4">
-              <div id="secondary-stat-item1" class="secondary-stat-item big-number-stat clearfix">
-                <div class="data">
-                  <span class="col-left big-number">260</span>
-                  <span class="col-right"><em>New Orders</em><em>3% <i class="fa fa-caret-down"></i></em></span>
-                </div>
-                <div id="spark-stat1" class="inlinesparkline">
-                  <canvas width="327" height="60" style="display: inline-block; vertical-align: top; width: 327px; height: 60px;"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div id="secondary-stat-item2" class="secondary-stat-item big-number-stat clearfix">
-                <p class="data">
-                  <span class="col-left big-number">$23,000</span>
-                  <span class="col-right"><em>Revenue</em><em>5% <i class="fa fa-caret-up"></i></em></span>
-                </p>
-                <div id="spark-stat2" class="inlinesparkline">
-                  <canvas width="327" height="60" style="display: inline-block; vertical-align: top; width: 327px; height: 60px;"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div id="secondary-stat-item3" class="secondary-stat-item big-number-stat clearfix">
-                <p class="data">
-                  <span class="col-left big-number">$47,000</span>
-                  <span class="col-right"><em>Total Sales</em><em>7% <i class="fa fa-caret-up"></i></em></span>
-                </p>
-                <div id="spark-stat3" class="inlinesparkline">
-                  <canvas width="327" height="60" style="display: inline-block; vertical-align: top; width: 327px; height: 60px;"></canvas>
-                </div>
+            <div class="widget-content">
+              <div class="panel panel-default">
+                <div class="panel-heading">Razorfish - Neev</div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Sr No</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Lion Id</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Nitin</td>
+                      <td>Jaryal</td>
+                      <td>nitinjar</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Mohal</td>
+                      <td>Thornton</td>
+                      <td>mohtho</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Anand</td>
+                      <td>Kumar</td>
+                      <td>anankum</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
-        <!-- end secondary stat -->
+        <!-- Chats, File upload and Recent Comments -->
         <div class="row">
           <div class="col-md-6">
-            <!-- Widget -->
             <div class="widget">
-              <!-- Widget head -->
               <div class="widget-head">
-                <div class="pull-left">Statistics</div>
+                <div class="pull-left">Quick Post</div>
                 <div class="widget-icons pull-right">
                   <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
                   <a href="#" class="wclose"><i class="fa fa-times"></i></a>
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <!-- Widget content -->
               <div class="widget-content">
-                <div class="graphData">
-                  <span class="daily">Daily</span>
-                  <span class="monthly">Monthly</span>
-                  <span class="yearly">Yearly</span>
-                  <div id="curve_chart">
-                    <div style="position: relative;">
-                      <div dir="ltr" style="position: relative; width: 500px; height: 300px;">
-                        <div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
-                          <svg width="500" height="300" aria-label="A chart." style="overflow: hidden;">
-                            <defs id="defs">
-                              <clipPath id="_ABSTRACT_RENDERER_ID_2">
-                                <rect x="94" y="58" width="313" height="185"></rect>
-                              </clipPath>
-                            </defs>
-                            <rect x="0" y="0" width="500" height="300" stroke="none" stroke-width="0" fill="#ffffff"></rect>
-                            <g>
-                              <text text-anchor="start" x="94" y="37.2" font-family="Arial" font-size="12" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Statistics</text>
-                            </g>
-                            <g>
-                              <rect x="242" y="275" width="12" height="12" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
-                              <g>
-                                <rect x="242" y="275" width="12" height="12" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
-                                <g>
-                                  <text text-anchor="start" x="259" y="285.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">Daily</text>
-                                </g>
-                                <rect x="242" y="275" width="12" height="12" stroke="none" stroke-width="0" fill="#3366cc"></rect>
-                              </g>
-                            </g>
-                            <g>
-                              <rect x="94" y="58" width="313" height="185" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect>
-                              <g clip-path="url(#_ABSTRACT_RENDERER_ID_2)">
-                                <g>
-                                  <rect x="94" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#cccccc"></rect>
-                                  <rect x="172" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#cccccc"></rect>
-                                  <rect x="250" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#cccccc"></rect>
-                                  <rect x="328" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#cccccc"></rect>
-                                  <rect x="406" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#cccccc"></rect>
-                                </g>
-                                <g>
-                                  <rect x="95" y="63" width="30" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
-                                  <rect x="95" y="89" width="33" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
-                                  <rect x="95" y="116" width="205" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
-                                  <rect x="95" y="142" width="311" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
-                                  <rect x="95" y="168" width="30" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
-                                  <rect x="95" y="195" width="33" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
-                                  <rect x="95" y="221" width="205" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect>
-                                </g>
-                                <g>
-                                  <rect x="94" y="58" width="1" height="185" stroke="none" stroke-width="0" fill="#333333"></rect>
-                                </g>
-                              </g>
-                              <g></g>
-                              <g>
-                                <g>
-                                  <text text-anchor="middle" x="94.5" y="260.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444">0</text>
-                                </g>
-                                <g>
-                                  <text text-anchor="middle" x="172.5" y="260.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444">25</text>
-                                </g>
-                                <g>
-                                  <text text-anchor="middle" x="250.5" y="260.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444">50</text>
-                                </g>
-                                <g>
-                                  <text text-anchor="middle" x="328.5" y="260.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444">75</text>
-                                </g>
-                                <g>
-                                  <text text-anchor="middle" x="406.5" y="260.2" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444">100</text>
-                                </g>
-                                <g>
-                                  <text text-anchor="end" x="82" y="75.84285714285714" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">29-07-15</text>
-                                </g>
-                                <g>
-                                  <text text-anchor="end" x="82" y="102.12857142857143" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">30-07-15</text>
-                                </g>
-                                <g>
-                                  <text text-anchor="end" x="82" y="128.4142857142857" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">01-07-15</text>
-                                </g>
-                                <g>
-                                  <text text-anchor="end" x="82" y="154.7" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">02-07-15</text>
-                                </g>
-                                <g>
-                                  <text text-anchor="end" x="82" y="180.98571428571427" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">03-07-15</text>
-                                </g>
-                                <g>
-                                  <text text-anchor="end" x="82" y="207.27142857142854" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">04-07-15</text>
-                                </g>
-                                <g>
-                                  <text text-anchor="end" x="82" y="233.55714285714285" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#222222">05-07-15</text>
-                                </g>
-                              </g>
-                            </g>
-                            <g></g>
-                          </svg>
-                          <div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Dates</th>
-                                  <th>Daily</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>29-07-15</td>
-                                  <td>10</td>
-                                </tr>
-                                <tr>
-                                  <td>30-07-15</td>
-                                  <td>11</td>
-                                </tr>
-                                <tr>
-                                  <td>01-07-15</td>
-                                  <td>66</td>
-                                </tr>
-                                <tr>
-                                  <td>02-07-15</td>
-                                  <td>100</td>
-                                </tr>
-                                <tr>
-                                  <td>03-07-15</td>
-                                  <td>10</td>
-                                </tr>
-                                <tr>
-                                  <td>04-07-15</td>
-                                  <td>11</td>
-                                </tr>
-                                <tr>
-                                  <td>05-07-15</td>
-                                  <td>66</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
+                <div class="padd">
+                  <div class="form quick-post">
+                    <!-- Edit profile form (not working)-->
+                    <form class="form-horizontal">
+                      <!-- Title -->
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="title">Title</label>
+                        <div class="col-lg-8">
+                          <input class="form-control" id="title" type="text">
                         </div>
                       </div>
-                      <div aria-hidden="true" style="display: none; position: absolute; top: 310px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 12px;">Daily</div>
-                      <div></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <!-- WIDGET TABLE -->
-            <div class="widget widget-table">
-              <div class="widget-header">
-                <h3><i class="fa fa-desktop"></i> Browser &amp; OS</h3>
-                <div class="btn-group widget-header-toolbar">
-                  <a href="#" title="Focus" class="btn-borderless btn-focus"><i class="fa fa-eye"></i></a>
-                  <a href="#" title="Expand/Collapse" class="btn-borderless btn-toggle-expand"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" title="Remove" class="btn-borderless btn-remove"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="btn-group widget-header-toolbar">
-                  <div class="control-inline toolbar-item-group">
-                    <span class="control-title">New Visits:</span>
-                    <div class="label label-success"><i class="fa fa-caret-up"></i> 3.5%</div>
-                  </div>
-                </div>
-              </div>
-              <div class="widget-content">
-                <div id="visit-stat-table_wrapper" class="dataTables_wrapper form-inline no-footer">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="dataTables_length" id="visit-stat-table_length">
-                        <label>
-                          <select name="visit-stat-table_length" aria-controls="visit-stat-table" class="form-control input-sm">
-                            <option value="10">10</option>
-                            <option value="25">25</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
-                          </select> records per page</label>
+                      <!-- Content -->
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="content">Content</label>
+                        <div class="col-lg-8">
+                          <textarea class="form-control" rows="5" id="content"></textarea>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div id="visit-stat-table_filter" class="dataTables_filter">
-                        <label>Search:
-                          <input type="search" class="form-control input-sm" placeholder="" aria-controls="visit-stat-table">
-                        </label>
+                      <!-- Cateogry -->
+                      <div class="form-group">
+                        <label class="control-label col-lg-2">Category</label>
+                        <div class="col-lg-5">
+                          <select class="form-control">
+                            <option selected="selected" value="">- Choose Cateogry -</option>
+                            <option value="1">General</option>
+                            <option value="2">News</option>
+                            <option value="3">Media</option>
+                            <option value="4">Funny</option>
+                          </select>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <table id="visit-stat-table" class="table table-sorting table-striped table-hover datatable dataTable no-footer" role="grid" aria-describedby="visit-stat-table_info">
-                    <thead>
-                      <tr role="row">
-                        <th class="sorting_asc" tabindex="0" aria-controls="visit-stat-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Browser: activate to sort column descending" style="width: 124px;">Browser</th>
-                        <th class="sorting" tabindex="0" aria-controls="visit-stat-table" rowspan="1" colspan="1" aria-label="Operating System: activate to sort column ascending" style="width: 146px;">Operating System</th>
-                        <th class="sorting" tabindex="0" aria-controls="visit-stat-table" rowspan="1" colspan="1" aria-label="Visits: activate to sort column ascending" style="width: 55px;">Visits</th>
-                        <th class="sorting" tabindex="0" aria-controls="visit-stat-table" rowspan="1" colspan="1" aria-label="New Visits: activate to sort column ascending" style="width: 93px;">New Visits</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr role="row" class="odd">
-                        <td class="sorting_1">Chrome</td>
-                        <td>Macintosh</td>
-                        <td>360</td>
-                        <td>82.78%</td>
-                      </tr>
-                      <tr role="row" class="even">
-                        <td class="sorting_1">Chrome</td>
-                        <td>Windows</td>
-                        <td>582</td>
-                        <td>87.24%</td>
-                      </tr>
-                      <tr role="row" class="odd">
-                        <td class="sorting_1">Chrome</td>
-                        <td>Linux</td>
-                        <td>172</td>
-                        <td>45.21%</td>
-                      </tr>
-                      <tr role="row" class="even">
-                        <td class="sorting_1">Chrome</td>
-                        <td>iOS</td>
-                        <td>86</td>
-                        <td>35.23%</td>
-                      </tr>
-                      <tr role="row" class="odd">
-                        <td class="sorting_1">Chrome</td>
-                        <td>iOS</td>
-                        <td>45</td>
-                        <td>23.21%</td>
-                      </tr>
-                      <tr role="row" class="even">
-                        <td class="sorting_1">Firefox</td>
-                        <td>Windows</td>
-                        <td>280</td>
-                        <td>63.12%</td>
-                      </tr>
-                      <tr role="row" class="odd">
-                        <td class="sorting_1">Firefox</td>
-                        <td>Android</td>
-                        <td>236</td>
-                        <td>58.02%</td>
-                      </tr>
-                      <tr role="row" class="even">
-                        <td class="sorting_1">Firefox</td>
-                        <td>Windows</td>
-                        <td>67</td>
-                        <td>27.11%</td>
-                      </tr>
-                      <tr role="row" class="odd">
-                        <td class="sorting_1">Internet Explorer</td>
-                        <td>Windows</td>
-                        <td>145</td>
-                        <td>45.23%</td>
-                      </tr>
-                      <tr role="row" class="even">
-                        <td class="sorting_1">Opera</td>
-                        <td>Windows</td>
-                        <td>328</td>
-                        <td>67.12%</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="dataTables_info" id="visit-stat-table_info" role="status" aria-live="polite">Showing 1 to 10 of 13 entries</div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="dataTables_paginate paging_simple_numbers" id="visit-stat-table_paginate">
-                        <ul class="pagination">
-                          <li class="paginate_button previous disabled" aria-controls="visit-stat-table" tabindex="0" id="visit-stat-table_previous"><a href="#">Previous</a></li>
-                          <li class="paginate_button active" aria-controls="visit-stat-table" tabindex="0"><a href="#">1</a></li>
-                          <li class="paginate_button " aria-controls="visit-stat-table" tabindex="0"><a href="#">2</a></li>
-                          <li class="paginate_button next" aria-controls="visit-stat-table" tabindex="0" id="visit-stat-table_next"><a href="#">Next</a></li>
-                        </ul>
+                      <!-- Tags -->
+                      <div class="form-group">
+                        <label class="control-label col-lg-2" for="tags">Tags</label>
+                        <div class="col-lg-8">
+                          <input class="form-control" id="tags" type="text">
+                        </div>
                       </div>
-                    </div>
+                      <!-- Buttons -->
+                      <div class="form-group">
+                        <!-- Buttons -->
+                        <div class="col-lg-offset-2 col-lg-6">
+                          <button type="submit" class="btn btn-sm btn-success">Publish</button>
+                          <button type="submit" class="btn btn-sm btn-danger">Save Draft</button>
+                          <button type="reset" class="btn btn-sm btn-default">Reset</button>
+                        </div>
+                      </div>
+                    </form>
                   </div>
-                </div>
-              </div>
-            </div>
-            <!-- END WIDGET TABLE -->
-          </div>
-        </div>
-      </div>
-      <!-- Sales Data Ends here -->
-      <!-- Newly Registered Customers -->
-      <div id="latestCustomer" style="display: none;">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="widget">
-              <div class="widget-head">
-                <div class="pull-left">List of latest customers</div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="widget-content clearfix">
-                <div class="table-responsive">
-                  <table class="table table-striped table-bordered table-hover">
-                    <thead>
-                      <tr>
-                        <th>S.No.</th>
-                        <th>Name</th>
-                        <th>Region</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Ravi Kumar</td>
-                        <td>India</td>
-                        <td>23/12/2012</td>
-                        <td><span class="label label-success">New User</span></td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Parneethi Chopra</td>
-                        <td>USA</td>
-                        <td>13/02/2012</td>
-                        <td><span class="label label-success">New User</span></td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Kumar Ragu</td>
-                        <td>Japan</td>
-                        <td>12/03/2012</td>
-                        <td><span class="label label-success">New User</span></td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Vishnu Vardan</td>
-                        <td>Bangkok</td>
-                        <td>03/11/2012</td>
-                        <td><span class="label label-success">New User</span></td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>Anuksha Sharma</td>
-                        <td>Singapore</td>
-                        <td>13/32/2012</td>
-                        <td><span class="label label-success">New User</span></td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>Vikas Jaiswal</td>
-                        <td>London</td>
-                        <td>13/32/2012</td>
-                        <td><span class="label label-success">New User</span></td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>Virat</td>
-                        <td>Canada</td>
-                        <td>13/32/2012</td>
-                        <td><span class="label label-success">New User</span></td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td>Messy</td>
-                        <td>Barcelona</td>
-                        <td>13/32/2012</td>
-                        <td><span class="label label-success">New User</span></td>
-                      </tr>
-                      <tr>
-                        <td>9</td>
-                        <td>Rohit Sharma</td>
-                        <td>Bankong</td>
-                        <td>13/32/2012</td>
-                        <td><span class="label label-success">New User</span></td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>Nitin jaryal</td>
-                        <td>Australia</td>
-                        <td>13/32/2012</td>
-                        <td><span class="label label-success">New User</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
                 </div>
                 <div class="widget-foot">
-                  <ul class="pagination pagination-sm pull-right">
-                    <li><a href="#">Prev</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">Next</a></li>
-                  </ul>
-                  <div class="clearfix"></div>
+                  <!-- Footer goes here -->
                 </div>
               </div>
             </div>
+            <!-- File Upload widget -->
           </div>
+          <!-- Dashboard graph ends -->
         </div>
       </div>
-      <!-- Newly Registered Customers end here -->
-      <!-- Best Sellers With Rating -->
-      <div id="sellerRate" style="display: none;">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="widget">
-              <div class="widget-head">
-                <div class="pull-left">List of latest customers</div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="widget-content">
-                <div class="table-responsive">
-                  <table class="table table-striped table-bordered table-hover">
-                    <thead>
-                      <tr>
-                        <th>S.No.</th>
-                        <th>Name of Seller</th>
-                        <th>Date</th>
-                        <th>Rating</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Samsung</td>
-                        <td>23/12/2012</td>
-                        <td><span class="label label-success">5000</span></td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Apple</td>
-                        <td>13/02/2012</td>
-                        <td><span class="label label-success">4200</span></td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Xolo</td>
-                        <td>12/03/2012</td>
-                        <td><span class="label label-success">1000</span></td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Micromax</td>
-                        <td>03/11/2012</td>
-                        <td><span class="label label-success">2500</span></td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>LG</td>
-                        <td>13/32/2012</td>
-                        <td><span class="label label-success">3000</span></td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>Motoral</td>
-                        <td>13/32/2012</td>
-                        <td><span class="label label-success">10000</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="widget-foot">
-                  <ul class="pagination pagination-sm pull-right">
-                    <li><a href="#">Prev</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">Next</a></li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="widget">
-              <div class="widget-head">
-                <div class="pull-left">Best Sellers</div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="widget-content">
-                <span id="sellers_Chart" style="width: 450px; height: 250px; display: inline-block"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 500px; height: 250px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="500" height="250" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_13"><rect x="84" y="48" width="333" height="155"></rect></clipPath></defs><rect x="0" y="0" width="500" height="250" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="84" y="28.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Recent visited Categories</text></g><g><rect x="84" y="48" width="333" height="155" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_13)"><g><rect x="84" y="202" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="164" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="125" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="87" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="48" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="95" y="126" width="34" height="76" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="150" y="138" width="34" height="64" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="205" y="188" width="34" height="14" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="261" y="165" width="34" height="37" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="316" y="157" width="34" height="45" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="371" y="49" width="34" height="153" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="84" y="202" width="333" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="112.16666666666667" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Samsung</text></g><g><text text-anchor="middle" x="167.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Apple</text></g><g><text text-anchor="middle" x="222.83333333333334" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Xolo</text></g><g><text text-anchor="middle" x="278.1666666666667" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Micromax</text></g><g><text text-anchor="middle" x="333.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">LG</text></g><g><text text-anchor="middle" x="388.83333333333337" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Motorola</text></g><g><text text-anchor="end" x="73" y="206.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="73" y="167.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">2,500</text></g><g><text text-anchor="end" x="73" y="129.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">5,000</text></g><g><text text-anchor="end" x="73" y="90.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">7,500</text></g><g><text text-anchor="end" x="73" y="52.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">10,000</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Seller</th><th>Rating</th></tr></thead><tbody><tr><td>Samsung</td><td>5000</td></tr><tr><td>Apple</td><td>4200</td></tr><tr><td>Xolo</td><td>1000</td></tr><tr><td>Micromax</td><td>2500</td></tr><tr><td>LG</td><td>3000</td></tr><tr><td>Motorola</td><td>10000</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 260px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">Recent visited Categories</div><div></div></div></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Best Sellers With Rating ends here -->
-      <!-- Matter -->
-      <div class="matter">
-        <div class="container">
-          <!-- Today status. jQuery Sparkline plugin used. -->
-          <div class="row">
-            <div class="col-md-12">
-              <!-- List starts -->
-              <ul class="today-datas">
-                <!-- List #1 -->
-                <li>
-                  <!-- Graph -->
-                  <div><span id="todayspark1" class="spark"><canvas width="77" height="30" style="display: inline-block; width: 77px; height: 30px; vertical-align: top;"></canvas></span></div>
-                  <!-- Text -->
-                  <div class="datas-text">12,000 visitors/day</div>
-                </li>
-                <li>
-                  <div><span id="todayspark2" class="spark"><canvas width="77" height="30" style="display: inline-block; width: 77px; height: 30px; vertical-align: top;"></canvas></span></div>
-                  <div class="datas-text">30,000 Pageviews</div>
-                </li>
-                <li>
-                  <div><span id="todayspark3" class="spark"><canvas width="77" height="30" style="display: inline-block; width: 77px; height: 30px; vertical-align: top;"></canvas></span></div>
-                  <div class="datas-text">15.66% Bounce Rate</div>
-                </li>
-                <li>
-                  <div><span id="todayspark4" class="spark"><canvas width="77" height="30" style="display: inline-block; width: 77px; height: 30px; vertical-align: top;"></canvas></span></div>
-                  <div class="datas-text">$12,000 Revenue/Day</div>
-                </li>
-                <li>
-                  <div><span id="todayspark5" class="spark"><canvas width="250" height="30" style="display: inline-block; width: 250px; height: 30px; vertical-align: top;"></canvas></span></div>
-                  <div class="datas-text">15,000000 visitors till date</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Today status ends -->
-          <!-- Dashboard Graph starts -->
-          <div class="row">
-            <div class="col-md-6">
-              <div class="widget">
-                <div class="widget-head">
-                  <div class="pull-left">My Info</div>
-                  <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                    <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="widget-content">
-                  <div class="panel panel-default">
-                    <div class="panel-heading">Razorfish - Neev</div>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Sr No</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Lion Id</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Nitin</td>
-                          <td>Jaryal</td>
-                          <td>nitinjar</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Mohal</td>
-                          <td>Thornton</td>
-                          <td>mohtho</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Anand</td>
-                          <td>Kumar</td>
-                          <td>anankum</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Chats, File upload and Recent Comments -->
-            <div class="row">
-              <div class="col-md-6">
-                <div class="widget">
-                  <div class="widget-head">
-                    <div class="pull-left">Quick Post</div>
-                    <div class="widget-icons pull-right">
-                      <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                      <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="widget-content">
-                    <div class="padd">
-                      <div class="form quick-post">
-                        <!-- Edit profile form (not working)-->
-                        <form class="form-horizontal">
-                          <!-- Title -->
-                          <div class="form-group">
-                            <label class="control-label col-lg-2" for="title">Title</label>
-                            <div class="col-lg-8">
-                              <input class="form-control" id="title" type="text">
-                            </div>
-                          </div>
-                          <!-- Content -->
-                          <div class="form-group">
-                            <label class="control-label col-lg-2" for="content">Content</label>
-                            <div class="col-lg-8">
-                              <textarea class="form-control" rows="5" id="content"></textarea>
-                            </div>
-                          </div>
-                          <!-- Cateogry -->
-                          <div class="form-group">
-                            <label class="control-label col-lg-2">Category</label>
-                            <div class="col-lg-5">
-                              <select class="form-control">
-                                <option selected="selected" value="">- Choose Cateogry -</option>
-                                <option value="1">General</option>
-                                <option value="2">News</option>
-                                <option value="3">Media</option>
-                                <option value="4">Funny</option>
-                              </select>
-                            </div>
-                          </div>
-                          <!-- Tags -->
-                          <div class="form-group">
-                            <label class="control-label col-lg-2" for="tags">Tags</label>
-                            <div class="col-lg-8">
-                              <input class="form-control" id="tags" type="text">
-                            </div>
-                          </div>
-                          <!-- Buttons -->
-                          <div class="form-group">
-                            <!-- Buttons -->
-                            <div class="col-lg-offset-2 col-lg-6">
-                              <button type="submit" class="btn btn-sm btn-success">Publish</button>
-                              <button type="submit" class="btn btn-sm btn-danger">Save Draft</button>
-                              <button type="reset" class="btn btn-sm btn-default">Reset</button>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                    <div class="widget-foot">
-                      <!-- Footer goes here -->
-                    </div>
-                  </div>
-                </div>
-                <!-- File Upload widget -->
-              </div>
-              <!-- Dashboard graph ends -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Matter ends -->
-      <!-- Order Incomplete starts here -->
-      <div id="orderIncomplete" style="display: none;">
-        <div class="row">
-          <div class="col-md-12">
-
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <img src="/{{config.baseUrl}}images/infra1.png">
-                  </div>
-                </div>
-            <div class="widget">
-              <div class="widget-head">
-                <div class="pull-left">Visa Status</div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="widget-content">
-
-                <div class="table-responsive">
-                  <table class="table table-striped table-bordered table-hover">
-                    <thead>
-                      <tr>
-                        <th>S.No</th>
-                        <th>Name</th>
-                        <th>Role</th>
-                        <th>Location</th>
-                        <th>Pending With</th>
-                        <th>Email Address</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Control</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Nitin</td>
-                        <td>PLD</td>
-                        <td>India</td>
-                        <td>Brajeshwar</td>
-                        <td>brajeshwar@razorfish.com</td>
-                        <td>1/12/2015</td>
-
-                        <td><span class="label label-success">Active</span><span class="label label-success">Eligible</span></td>
-                        <td>
-                          <button class="btn btn-xs btn-success"><i class="fa fa-check"></i> </button>
-                          <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i> </button>
-                          <button class="btn btn-xs btn-danger"><i class="fa fa-times"></i> </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                         <td>Anand</td>
-                        <td>PLD</td>
-                        <td>India</td>
-                        <td>Brajeshwar</td>
-                        <td>brajeshwar@razorfish.com</td>
-                        <td>1/12/2015</td>
-
-                        <td><span class="label label-danger">Rejected</span></td>
-                        <td>
-                          <button class="btn btn-xs btn-default"><i class="fa fa-check"></i> </button>
-                          <button class="btn btn-xs btn-default"><i class="fa fa-pencil"></i> </button>
-                          <button class="btn btn-xs btn-default"><i class="fa fa-times"></i> </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                         <td>Mohan</td>
-                        <td>Designer</td>
-                        <td>India</td>
-                        <td>Brajeshwar</td>
-                        <td>brajeshwar@razorfish.com</td>
-                        <td>1/12/2015</td>
-                        <td><span class="label label-success">Active</span><span class="label label-success">Fresher</span></td>
-                        <td>
-                          <div class="btn-group">
-                            <button class="btn btn-xs btn-default"><i class="fa fa-check"></i> </button>
-                            <button class="btn btn-xs btn-default"><i class="fa fa-pencil"></i> </button>
-                            <button class="btn btn-xs btn-default"><i class="fa fa-times"></i> </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                         <td>Sambram</td>
-                        <td>Backend</td>
-                        <td>India</td>
-                        <td>Raman</td>
-                        <td>raman@razorfish.com</td>
-                        <td>1/12/2015</td>
-
-                        <td><span class="label label-success">Active</span></td>
-                        <td>
-                          <div class="btn-group">
-                            <button class="btn btn-xs btn-success"><i class="fa fa-check"></i> </button>
-                            <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i> </button>
-                            <button class="btn btn-xs btn-danger"><i class="fa fa-times"></i> </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                         <td>Siby</td>
-                        <td>Backend</td>
-                        <td>India</td>
-                        <td>Brajeshwar</td>
-                        <td>brajeshwar@razorfish.com</td>
-                        <td>1/12/2015</td>
-                        <td><span class="label label-danger">Rejected</span></td>
-                        <td>
-                          <div class="btn-group1">
-                            <button class="btn btn-xs btn-success"><i class="fa fa-check"></i> </button>
-                            <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i> </button>
-                            <button class="btn btn-xs btn-danger"><i class="fa fa-times"></i> </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                          <td>Mala</td>
-                        <td>PLD</td>
-                        <td>India</td>
-                        <td>Brajeshwar</td>
-                        <td>brajeshwar@razorfish.com</td>
-                        <td>1/12/2015</td>
-                         <td><span class="label label-success">active</span><span class="label label-success">Active</span></td>
-                        <td>
-                          <div class="btn-group1">
-                            <button class="btn btn-xs btn-success"><i class="fa fa-check"></i> </button>
-                            <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i> </button>
-                            <button class="btn btn-xs btn-danger"><i class="fa fa-times"></i> </button>
-                          </div>
-                        </td>
-                      </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="widget-foot">
-                  <ul class="pagination pagination-sm pull-right">
-                    <li><a href="#">Prev</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">Next</a></li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Order Incomplete ends here -->
-      <!-- Most visited categories having graph data -->
-      <div id="visitedCategories" style="display: none;">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="widget">
-              <div class="widget-head">
-                <div class="pull-left">Fluid Talent</div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="widget-content">
-
-<div class="row">
-  <div class="col-md-6"><button class="btn btn-success" type="button">
-  UK <span class="badge">4</span>
-</button></div>
-  <div class="col-md-6"><button class="btn btn-primary" type="button">
-  Germany <span class="badge label-success">2</span>
-</button></div>
-</div>
-
-
-
-<div class="row">
-  <div class="col-md-6"><button class="btn btn-primary" type="button">
-  Australia <span class="badge">1</span>
-</button>
-</div>
-  <div class="col-md-6"><button class="btn btn-success" type="button">
-  North America <span class="badge">4</span>
-</button></div>
-</div>
-
-<div class="row">
-  <div class="col-md-6"><button class="btn btn-success" type="button">
-  Dubai <span class="badge">1</span>
-</button>
-</div>
-  <div class="col-md-6"><button class="btn btn-success" type="button">
-  South America <span class="badge">6</span>
-</button>
-</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="widget">
-              <div class="widget-head">
-                <div class="pull-left"><strong>Rewards and Recognitions</strong></div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="widget-content">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Quaterly Updates</div>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Sr No</th>
-                          <th>Spot award</th>
-                          <th>Shining Star</th>
-                          <th>Best Team</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Nitin Jaryal</td>
-                          <td>Mohan</td>
-                          <td>Anand</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Mohal</td>
-                          <td>Thornton</td>
-                          <td>mohtho</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Anand</td>
-                          <td>Kumar</td>
-                          <td>anankum</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="widget">
-              <div class="widget-head">
-                <div class="pull-left">Best Contributors</div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="widget-content">
-                <span id="colchart_diff" style="width: 450px; height: 250px; display: inline-block"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 500px; height: 250px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="500" height="250" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><linearGradient id="_ABSTRACT_RENDERER_ID_6" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#3366cc;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#3366cc;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#3366cc;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#3366cc;stop-opacity:1"></stop></linearGradient><linearGradient id="_ABSTRACT_RENDERER_ID_7" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#dc3912;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#dc3912;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#dc3912;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#dc3912;stop-opacity:1"></stop></linearGradient><linearGradient id="_ABSTRACT_RENDERER_ID_8" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#ff9900;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#ff9900;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#ff9900;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ff9900;stop-opacity:1"></stop></linearGradient><linearGradient id="_ABSTRACT_RENDERER_ID_9" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#109618;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#109618;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#109618;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#109618;stop-opacity:1"></stop></linearGradient><linearGradient id="_ABSTRACT_RENDERER_ID_10" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#990099;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#990099;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#990099;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#990099;stop-opacity:1"></stop></linearGradient><linearGradient id="_ABSTRACT_RENDERER_ID_11" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#0099c6;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#0099c6;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#0099c6;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#0099c6;stop-opacity:1"></stop></linearGradient></defs><rect x="0" y="0" width="500" height="250" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="84" y="28.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Annually Report</text></g><g><rect x="84" y="48" width="109" height="101" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="84" y="48" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="57.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Managers</text></g><rect x="84" y="48" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_6)"></rect></g><g><rect x="84" y="66" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="75.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">PLDs</text></g><rect x="84" y="66" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_7)"></rect></g><g><rect x="84" y="84" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="93.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Backend Developers</text></g><rect x="84" y="84" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_8)"></rect></g><g><rect x="84" y="102" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="111.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">BAs</text></g><rect x="84" y="102" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_9)"></rect></g><g><rect x="84" y="120" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="129.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">QAs</text></g><rect x="84" y="120" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_10)"></rect></g><g><rect x="84" y="138" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="147.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Designers</text></g><rect x="84" y="138" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_11)"></rect></g></g><g><path d="M314,126L314,79.80000000000001A46.199999999999996,46.199999999999996,0,0,1,318.5283918832257,80.02246562774451L314,126A0,0,0,0,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#3366cc"></path></g><g><path d="M314,126L318.5283918832257,80.02246562774451A46.199999999999996,46.199999999999996,0,0,1,322.1217881329672,80.51949255424702L314,126A0,0,0,0,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#dc3912"></path></g><g><path d="M314,126L322.1217881329672,80.51949255424702A46.199999999999996,46.199999999999996,0,0,1,326.54054878376644,81.53456807584149L314,126A0,0,0,0,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#ff9900"></path></g><g><path d="M314,126L326.54054878376644,81.53456807584149A46.199999999999996,46.199999999999996,0,0,1,357.3444397196188,141.99060803698018L314,126A0,0,0,0,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#109618"></path></g><g><path d="M314,126L357.3444397196188,141.99060803698018A46.199999999999996,46.199999999999996,0,0,1,317.6248102226264,172.0575808184705L314,126A0,0,0,0,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#990099"></path></g><g><path d="M314,126L317.6248102226264,172.0575808184705A46.199999999999996,46.199999999999996,0,1,1,314,79.80000000000001L314,126A0,0,0,1,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#0099c6"></path></g><g><path d="M314,79.338L314,49A77,77,0,0,1,387.9088060321963,104.40165768177604L358.78873645551096,112.91140455515628A46.662,46.662,0,0,0,314,79.338" stroke="#ffffff" stroke-width="1" fill="#3366cc"></path></g><g><path d="M358.78873645551096,112.91140455515628L387.9088060321963,104.40165768177604A77,77,0,0,1,389.8071501633687,112.49903765991216L359.93913299900146,117.81841682190677A46.662,46.662,0,0,0,358.78873645551096,112.91140455515628" stroke="#ffffff" stroke-width="1" fill="#dc3912"></path></g><g><path d="M359.93913299900146,117.81841682190677L389.8071501633687,112.49903765991216A77,77,0,0,1,390.7472375787627,132.23390118857822L360.50882597273016,129.77774412027838A46.662,46.662,0,0,0,359.93913299900146,117.81841682190677" stroke="#ffffff" stroke-width="1" fill="#ff9900"></path></g><g><path d="M360.50882597273016,129.77774412027838L390.7472375787627,132.23390118857822A77,77,0,0,1,329.5438040965412,201.4147873709682L323.419545282504,171.70136114680673A46.662,46.662,0,0,0,360.50882597273016,129.77774412027838" stroke="#ffffff" stroke-width="1" fill="#109618"></path></g><g><path d="M288.8737022865755,165.319351561494L272.5374625191015,190.88341841830692A77,77,0,0,1,314,49L314,79.338A46.662,46.662,0,0,0,288.8737022865755,165.319351561494" stroke="#ffffff" stroke-width="1" fill="#0099c6"></path></g><g><path d="M323.419545282504,171.70136114680673L329.54380409654124,201.4147873709682A77,77,0,0,1,272.5374625191015,190.88341841830692L288.8737022865755,165.319351561494A46.662,46.662,0,0,0,323.419545282504,171.70136114680673" stroke="#ffffff" stroke-width="1" fill="#990099"></path></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>Phones</td></tr><tr><td>Clothes</td></tr><tr><td>Shoes</td></tr><tr><td>Clothes</td></tr><tr><td>Grocery</td></tr><tr><td>Toys</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 260px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 11px;">Toys</div><div></div></div></span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="widget">
-              <div class="widget-head">
-                <div class="pull-left">Quench</div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="widget-content">
-                <span id="barchart_diff" style="width: 450px; height: 250px; display: inline-block"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 500px; height: 250px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="500" height="250" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_12"><rect x="84" y="48" width="333" height="155"></rect></clipPath></defs><rect x="0" y="0" width="500" height="250" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="84" y="28.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Coupon avail categories</text></g><g><rect x="84" y="48" width="333" height="155" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_12)"><g><rect x="84" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="167" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="250" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="333" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="416" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="85" y="53" width="7" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="59" width="165" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="79" width="6" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="84" width="13" height="5" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="105" width="7" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="110" width="32" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="130" width="138" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="136" width="165" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="156" width="95" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="161" width="99" height="5" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="182" width="271" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="187" width="331" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="84" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="84.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="middle" x="167.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">2,500</text></g><g><text text-anchor="middle" x="250.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">5,000</text></g><g><text text-anchor="middle" x="333.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">7,500</text></g><g><text text-anchor="middle" x="416.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">10,000</text></g><g><text text-anchor="end" x="73" y="65.18333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Phones</text></g><g><text text-anchor="end" x="73" y="90.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Clothes</text></g><g><text text-anchor="end" x="73" y="116.51666666666667" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Shoes</text></g><g><text text-anchor="end" x="73" y="142.18333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Clothes</text></g><g><text text-anchor="end" x="73" y="167.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Grocery</text></g><g><text text-anchor="end" x="73" y="193.51666666666668" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Toys</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>Phones</td></tr><tr><td>Clothes</td></tr><tr><td>Shoes</td></tr><tr><td>Clothes</td></tr><tr><td>Grocery</td></tr><tr><td>Toys</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 260px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">Recent visited Categories</div><div></div></div></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Most visited categories having graph data ends here -->
     </div>
-    <!-- Mainbar ends -->
-    <div class="clearfix"></div>
   </div>
-  <!-- Content ends -->
-  <!-- Footer starts -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <!-- Copyright info -->
-          <p class="copy">Copyright © 2015 | <a href="#">All rights reserved</a> </p>
+  <!-- Matter ends -->
+  <!-- Order Incomplete starts here -->
+  <div id="infraContent" style="display: none;" class="mainbar-content">
+
+    <!-- Page heading -->
+    <div class="page-head">
+      <h2 class="pull-left">
+        <i class="fa fa-building fa-2x"></i> Infrastructure</h2>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <img src="/{{config.baseUrl}}images/infra1.png">
+          </div>
+        </div>
+        <div class="widget">
+          <div class="widget-head">
+            <div class="pull-left">Visa Status</div>
+            <div class="widget-icons pull-right">
+              <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+              <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="widget-content">
+
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Location</th>
+                    <th>Pending With</th>
+                    <th>Email Address</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Control</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Nitin</td>
+                    <td>PLD</td>
+                    <td>India</td>
+                    <td>Brajeshwar</td>
+                    <td>brajeshwar@razorfish.com</td>
+                    <td>1/12/2015</td>
+
+                    <td><span class="label label-success">Active</span><span class="label label-success">Eligible</span></td>
+                    <td>
+                      <button class="btn btn-xs btn-success"><i class="fa fa-check"></i> </button>
+                      <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i> </button>
+                      <button class="btn btn-xs btn-danger"><i class="fa fa-times"></i> </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Anand</td>
+                    <td>PLD</td>
+                    <td>India</td>
+                    <td>Brajeshwar</td>
+                    <td>brajeshwar@razorfish.com</td>
+                    <td>1/12/2015</td>
+
+                    <td><span class="label label-danger">Rejected</span></td>
+                    <td>
+                      <button class="btn btn-xs btn-default"><i class="fa fa-check"></i> </button>
+                      <button class="btn btn-xs btn-default"><i class="fa fa-pencil"></i> </button>
+                      <button class="btn btn-xs btn-default"><i class="fa fa-times"></i> </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Mohan</td>
+                    <td>Designer</td>
+                    <td>India</td>
+                    <td>Brajeshwar</td>
+                    <td>brajeshwar@razorfish.com</td>
+                    <td>1/12/2015</td>
+                    <td><span class="label label-success">Active</span><span class="label label-success">Fresher</span></td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn btn-xs btn-default"><i class="fa fa-check"></i> </button>
+                        <button class="btn btn-xs btn-default"><i class="fa fa-pencil"></i> </button>
+                        <button class="btn btn-xs btn-default"><i class="fa fa-times"></i> </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Sambram</td>
+                    <td>Backend</td>
+                    <td>India</td>
+                    <td>Raman</td>
+                    <td>raman@razorfish.com</td>
+                    <td>1/12/2015</td>
+
+                    <td><span class="label label-success">Active</span></td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn btn-xs btn-success"><i class="fa fa-check"></i> </button>
+                        <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i> </button>
+                        <button class="btn btn-xs btn-danger"><i class="fa fa-times"></i> </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Siby</td>
+                    <td>Backend</td>
+                    <td>India</td>
+                    <td>Brajeshwar</td>
+                    <td>brajeshwar@razorfish.com</td>
+                    <td>1/12/2015</td>
+                    <td><span class="label label-danger">Rejected</span></td>
+                    <td>
+                      <div class="btn-group1">
+                        <button class="btn btn-xs btn-success"><i class="fa fa-check"></i> </button>
+                        <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i> </button>
+                        <button class="btn btn-xs btn-danger"><i class="fa fa-times"></i> </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Mala</td>
+                    <td>PLD</td>
+                    <td>India</td>
+                    <td>Brajeshwar</td>
+                    <td>brajeshwar@razorfish.com</td>
+                    <td>1/12/2015</td>
+                    <td><span class="label label-success">active</span><span class="label label-success">Active</span></td>
+                    <td>
+                      <div class="btn-group1">
+                        <button class="btn btn-xs btn-success"><i class="fa fa-check"></i> </button>
+                        <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i> </button>
+                        <button class="btn btn-xs btn-danger"><i class="fa fa-times"></i> </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="widget-foot">
+            <ul class="pagination pagination-sm pull-right">
+              <li><a href="#">Prev</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</div>
+<!-- Order Incomplete ends here -->
+<!-- Most visited categories having graph data -->
+<div id="excitingContent" style="display: none;" class="mainbar-content">
+
+  <!-- Page heading -->
+  <div class="page-head">
+    <h2 class="pull-left">
+      <i class="fa fa-trophy fa-2x"></i> Exciting Opportunities</h2>
+      <div class="clearfix"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="widget">
+        <div class="widget-head">
+          <div class="pull-left">Fluid Talent</div>
+          <div class="widget-icons pull-right">
+            <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+            <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="widget-content">
+
+          <div class="row">
+            <div class="col-md-6"><button class="btn btn-success" type="button">
+              UK <span class="badge">4</span>
+            </button></div>
+            <div class="col-md-6"><button class="btn btn-primary" type="button">
+              Germany <span class="badge label-success">2</span>
+            </button></div>
+          </div>
+
+
+
+            <div class="row">
+              <div class="col-md-6"><button class="btn btn-primary" type="button">
+                Australia <span class="badge">1</span>
+              </button>
+            </div>
+            <div class="col-md-6"><button class="btn btn-success" type="button">
+              North America <span class="badge">4</span>
+            </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6"><button class="btn btn-success" type="button">
+            Dubai <span class="badge">1</span>
+            </button>
+          </div>
+          <div class="col-md-6"><button class="btn btn-success" type="button">
+            South America <span class="badge">6</span>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="widget">
+        <div class="widget-head">
+          <div class="pull-left"><strong>Rewards and Recognitions</strong></div>
+          <div class="widget-icons pull-right">
+            <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+            <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="widget-content">
+          <div class="panel panel-default">
+            <div class="panel-heading">Quaterly Updates</div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Sr No</th>
+                  <th>Spot award</th>
+                  <th>Shining Star</th>
+                  <th>Best Team</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Nitin Jaryal</td>
+                  <td>Mohan</td>
+                  <td>Anand</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Mohal</td>
+                  <td>Thornton</td>
+                  <td>mohtho</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Anand</td>
+                  <td>Kumar</td>
+                  <td>anankum</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+      </div>
+  </div>
+</div> <!-- End of excitingContent -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="widget">
+        <div class="widget-head">
+          <div class="pull-left">Best Contributors</div>
+          <div class="widget-icons pull-right">
+            <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+            <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="widget-content">
+          <span id="colchart_diff" style="width: 450px; height: 250px; display: inline-block"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 500px; height: 250px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="500" height="250" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><linearGradient id="_ABSTRACT_RENDERER_ID_6" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#3366cc;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#3366cc;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#3366cc;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#3366cc;stop-opacity:1"></stop></linearGradient><linearGradient id="_ABSTRACT_RENDERER_ID_7" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#dc3912;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#dc3912;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#dc3912;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#dc3912;stop-opacity:1"></stop></linearGradient><linearGradient id="_ABSTRACT_RENDERER_ID_8" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#ff9900;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#ff9900;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#ff9900;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ff9900;stop-opacity:1"></stop></linearGradient><linearGradient id="_ABSTRACT_RENDERER_ID_9" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#109618;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#109618;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#109618;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#109618;stop-opacity:1"></stop></linearGradient><linearGradient id="_ABSTRACT_RENDERER_ID_10" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#990099;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#990099;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#990099;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#990099;stop-opacity:1"></stop></linearGradient><linearGradient id="_ABSTRACT_RENDERER_ID_11" x1="100%" y1="0%" x2="0%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="0%" style="stop-color:#0099c6;stop-opacity:0.5"></stop><stop offset="49.99%" style="stop-color:#0099c6;stop-opacity:0.5"></stop><stop offset="50%" style="stop-color:#0099c6;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#0099c6;stop-opacity:1"></stop></linearGradient></defs><rect x="0" y="0" width="500" height="250" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="84" y="28.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Annually Report</text></g><g><rect x="84" y="48" width="109" height="101" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="84" y="48" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="57.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Managers</text></g><rect x="84" y="48" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_6)"></rect></g><g><rect x="84" y="66" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="75.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">PLDs</text></g><rect x="84" y="66" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_7)"></rect></g><g><rect x="84" y="84" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="93.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Backend Developers</text></g><rect x="84" y="84" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_8)"></rect></g><g><rect x="84" y="102" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="111.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">BAs</text></g><rect x="84" y="102" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_9)"></rect></g><g><rect x="84" y="120" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="129.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">QAs</text></g><rect x="84" y="120" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_10)"></rect></g><g><rect x="84" y="138" width="109" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="110" y="147.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Designers</text></g><rect x="84" y="138" width="22" height="11" stroke="none" stroke-width="0" fill="url(#_ABSTRACT_RENDERER_ID_11)"></rect></g></g><g><path d="M314,126L314,79.80000000000001A46.199999999999996,46.199999999999996,0,0,1,318.5283918832257,80.02246562774451L314,126A0,0,0,0,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#3366cc"></path></g><g><path d="M314,126L318.5283918832257,80.02246562774451A46.199999999999996,46.199999999999996,0,0,1,322.1217881329672,80.51949255424702L314,126A0,0,0,0,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#dc3912"></path></g><g><path d="M314,126L322.1217881329672,80.51949255424702A46.199999999999996,46.199999999999996,0,0,1,326.54054878376644,81.53456807584149L314,126A0,0,0,0,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#ff9900"></path></g><g><path d="M314,126L326.54054878376644,81.53456807584149A46.199999999999996,46.199999999999996,0,0,1,357.3444397196188,141.99060803698018L314,126A0,0,0,0,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#109618"></path></g><g><path d="M314,126L357.3444397196188,141.99060803698018A46.199999999999996,46.199999999999996,0,0,1,317.6248102226264,172.0575808184705L314,126A0,0,0,0,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#990099"></path></g><g><path d="M314,126L317.6248102226264,172.0575808184705A46.199999999999996,46.199999999999996,0,1,1,314,79.80000000000001L314,126A0,0,0,1,0,314,126" stroke="#ffffff" stroke-width="1" fill-opacity="0.5" fill="#0099c6"></path></g><g><path d="M314,79.338L314,49A77,77,0,0,1,387.9088060321963,104.40165768177604L358.78873645551096,112.91140455515628A46.662,46.662,0,0,0,314,79.338" stroke="#ffffff" stroke-width="1" fill="#3366cc"></path></g><g><path d="M358.78873645551096,112.91140455515628L387.9088060321963,104.40165768177604A77,77,0,0,1,389.8071501633687,112.49903765991216L359.93913299900146,117.81841682190677A46.662,46.662,0,0,0,358.78873645551096,112.91140455515628" stroke="#ffffff" stroke-width="1" fill="#dc3912"></path></g><g><path d="M359.93913299900146,117.81841682190677L389.8071501633687,112.49903765991216A77,77,0,0,1,390.7472375787627,132.23390118857822L360.50882597273016,129.77774412027838A46.662,46.662,0,0,0,359.93913299900146,117.81841682190677" stroke="#ffffff" stroke-width="1" fill="#ff9900"></path></g><g><path d="M360.50882597273016,129.77774412027838L390.7472375787627,132.23390118857822A77,77,0,0,1,329.5438040965412,201.4147873709682L323.419545282504,171.70136114680673A46.662,46.662,0,0,0,360.50882597273016,129.77774412027838" stroke="#ffffff" stroke-width="1" fill="#109618"></path></g><g><path d="M288.8737022865755,165.319351561494L272.5374625191015,190.88341841830692A77,77,0,0,1,314,49L314,79.338A46.662,46.662,0,0,0,288.8737022865755,165.319351561494" stroke="#ffffff" stroke-width="1" fill="#0099c6"></path></g><g><path d="M323.419545282504,171.70136114680673L329.54380409654124,201.4147873709682A77,77,0,0,1,272.5374625191015,190.88341841830692L288.8737022865755,165.319351561494A46.662,46.662,0,0,0,323.419545282504,171.70136114680673" stroke="#ffffff" stroke-width="1" fill="#990099"></path></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>Phones</td></tr><tr><td>Clothes</td></tr><tr><td>Shoes</td></tr><tr><td>Clothes</td></tr><tr><td>Grocery</td></tr><tr><td>Toys</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 260px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 11px;">Toys</div><div></div></div></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="widget">
+        <div class="widget-head">
+          <div class="pull-left">Quench</div>
+          <div class="widget-icons pull-right">
+            <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+            <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="widget-content">
+          <span id="barchart_diff" style="width: 450px; height: 250px; display: inline-block"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 500px; height: 250px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="500" height="250" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_12"><rect x="84" y="48" width="333" height="155"></rect></clipPath></defs><rect x="0" y="0" width="500" height="250" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="84" y="28.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Coupon avail categories</text></g><g><rect x="84" y="48" width="333" height="155" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_12)"><g><rect x="84" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="167" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="250" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="333" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="416" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="85" y="53" width="7" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="59" width="165" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="79" width="6" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="84" width="13" height="5" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="105" width="7" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="110" width="32" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="130" width="138" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="136" width="165" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="156" width="95" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="161" width="99" height="5" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="182" width="271" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="187" width="331" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="84" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="84.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="middle" x="167.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">2,500</text></g><g><text text-anchor="middle" x="250.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">5,000</text></g><g><text text-anchor="middle" x="333.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">7,500</text></g><g><text text-anchor="middle" x="416.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">10,000</text></g><g><text text-anchor="end" x="73" y="65.18333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Phones</text></g><g><text text-anchor="end" x="73" y="90.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Clothes</text></g><g><text text-anchor="end" x="73" y="116.51666666666667" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Shoes</text></g><g><text text-anchor="end" x="73" y="142.18333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Clothes</text></g><g><text text-anchor="end" x="73" y="167.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Grocery</text></g><g><text text-anchor="end" x="73" y="193.51666666666668" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Toys</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>Phones</td></tr><tr><td>Clothes</td></tr><tr><td>Shoes</td></tr><tr><td>Clothes</td></tr><tr><td>Grocery</td></tr><tr><td>Toys</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 260px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">Recent visited Categories</div><div></div></div></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+<!-- Most visited categories having graph data ends here -->
+</div>
+<!-- Mainbar ends -->
+<div class="clearfix"></div>
+</div>
+<!-- Content ends -->
+<!-- Footer starts -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Copyright info -->
+        <p class="copy">Copyright © 2015 | <a href="#">All rights reserved</a> </p>
+      </div>
+    </div>
+  </div>
+</footer>
 {% endblock %}

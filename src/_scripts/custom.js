@@ -1,39 +1,53 @@
 (function(dmUIConfig) {
   $(document).ready(function () {
-    $('#salesData, #orderIncomplete, #visitorsData, #visitedCategories, #sellerRate, #latestCustomer').css('display', 'none');
-    $('#Sales').click(function(){
-      $('.matter').css('display', 'none');
-      $('#visitorsData, #orderIncomplete, #visitedCategories, #latestCustomer, #sellerRate').css('display', 'none');
-      $('#salesData').css('display', 'block');
+
+
+    $('.mainbar-content').css('display', 'none');
+    $('#dashboardContent').css('display', 'block');
+
+    $('.js-dashboard-cta').click(function () {
+      $('.mainbar-content').css('display', 'none');
+      $('#dashboardContent').css('display', 'block');
     });
 
-    $('#Visitor').click(function(){
-      $('.matter, #salesData, #visitedCategories, #latestCustomer, #sellerRate').css('display', 'none');
-      $('#visitorsData').css('display', 'block');
+    $('.js-employee-cta').click(function(){
+      $('.mainbar-content').css('display', 'none');
+      $('#employeeServicesContent').css('display', 'block');
     });
 
-    $('#incompleteOrders').click(function(){
-      $('.matter').css('display', 'none');
-      $('#salesData, #visitorsData, #visitedCategories, #latestCustomer, #sellerRate').css('display', 'none');
-      $('#orderIncomplete').css('display', 'block');
+    $('.js-timesheet-cta').click(function(){
+      $('.mainbar-content').css('display', 'none');
+      $('#timesheetContent').css('display', 'block');
     });
 
-    $('#mostVisited').click(function(){
-      $('.matter').css('display', 'none');
-      $('#salesData, #visitorsData, #orderIncomplete, #latestCustomer, #sellerRate').css('display', 'none');
-      $('#visitedCategories').css('display', 'block');
+    $('.js-allocation-cta').click(function(){
+      $('.mainbar-content').css('display', 'none');
+      $('#allocationContent').css('display', 'block');
     });
 
-    $('#customersData').click(function(){
-      $('.matter').css('display', 'none');
-      $('#salesData, #visitorsData, #orderIncomplete, #sellerRate').css('display', 'none');
-      $('#latestCustomer').css('display', 'block');
+    $('.js-hr-cta').click(function(){
+      $('.mainbar-content').css('display', 'none');
+      $('#hrManageContent').css('display', 'block');
     });
 
-    $('#bestSeller').click(function(){
-      $('.matter').css('display', 'none');
-      $('#salesData, #visitorsData, #orderIncomplete, #latestCustomer').css('display', 'none');
-      $('#sellerRate').css('display', 'block');
+    $('.js-learning-cta').click(function(){
+      $('.mainbar-content').css('display', 'none');
+      $('#learningContent').css('display', 'block');
+    });
+
+    $('.js-infra-cta').click(function(){
+      $('.mainbar-content').css('display', 'none');
+      $('#infraContent').css('display', 'block');
+    });
+
+    $('.js-opportunity-cta').click(function(){
+      $('.mainbar-content').css('display', 'none');
+      $('#excitingContent').css('display', 'block');
+    });
+
+    $('#nav li a').on('click', function () {
+      $('#nav li').removeClass('open');
+      $(this).parent().addClass('open');
     });
   });
 }(DM_UI_CONFIG));
