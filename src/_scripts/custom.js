@@ -16,6 +16,8 @@
     });
 
     $('.js-timesheet-cta').click(function(){
+      $('#nav li').removeClass('open');
+      $('#nav li .js-timesheet-cta').parent().addClass('open');
       $('.mainbar-content').css('display', 'none');
       $('#timesheetContent').css('display', 'block');
     });
