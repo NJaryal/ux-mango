@@ -220,7 +220,7 @@
                   <div class="tile-stats tile-green">
                     <div class="icon"><i class="fa fa-bar-chart"></i></div>
                     <div class="num" data-start="0" data-end="135" data-postfix="" data-duration="1500" data-delay="600">105</div>
-                    <h3>Development</h3>
+                    <h3>Develop + Tech Tuesday</h3>
                     <p>you got technical stuff here.</p>
                   </div>
                 </div>
@@ -509,11 +509,27 @@
         <i class="fa fa-calendar fa-2x"></i> HR Management</h2>
         <div class="clearfix"></div>
     </div>
+
     <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-primary"> <div class="panel-heading"> <h3 class="panel-title">Leave</h3> </div> <div class="panel-body">
+        <ul class="list-group">
+        <li class="list-group-item"><a>Apply leave</a></li>
+
+        <li class="list-group-item">
+              <div><img src="/{{config.baseUrl}}images/leave.png" width="95%"></div>
+        </li>
+        </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="row">
       <div class="col-md-6">
         <div class="widget">
           <div class="widget-head">
-            <div class="pull-left">List of latest customers</div>
+            <div class="pull-left">Upcoming Events</div>
             <div class="widget-icons pull-right">
               <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
               <a href="#" class="wclose"><i class="fa fa-times"></i></a>
@@ -526,7 +542,7 @@
                 <thead>
                   <tr>
                     <th>S.No.</th>
-                    <th>Name of Seller</th>
+                    <th>Event Name</th>
                     <th>Date</th>
                     <th>Rating</th>
                   </tr>
@@ -534,51 +550,30 @@
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>Samsung</td>
-                    <td>23/12/2012</td>
-                    <td><span class="label label-success">5000</span></td>
+                    <td>Quartely Meeting</td>
+                    <td>23/12/2015</td>
+                    <td><span class="label label-success">220</span></td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>Apple</td>
-                    <td>13/02/2012</td>
-                    <td><span class="label label-success">4200</span></td>
+                    <td>Tech Tuesday - Git</td>
+                    <td>08/12/2015</td>
+                    <td><span class="label label-success">42</span></td>
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>Xolo</td>
-                    <td>12/03/2012</td>
-                    <td><span class="label label-success">1000</span></td>
+                    <td>Ux Hackathon</td>
+                    <td>10/12/2015</td>
+                    <td><span class="label label-success">10</span></td>
                   </tr>
                   <tr>
                     <td>4</td>
-                    <td>Micromax</td>
-                    <td>03/11/2012</td>
-                    <td><span class="label label-success">2500</span></td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>LG</td>
-                    <td>13/32/2012</td>
-                    <td><span class="label label-success">3000</span></td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>Motoral</td>
-                    <td>13/32/2012</td>
-                    <td><span class="label label-success">10000</span></td>
+                    <td>Client Visit</td>
+                    <td>10/1/2016</td>
+                    <td><span class="label label-success">100</span></td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div class="widget-foot">
-              <ul class="pagination pagination-sm pull-right">
-                <li><a href="#">Prev</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">Next</a></li>
-              </ul>
-              <div class="clearfix"></div>
             </div>
           </div>
         </div>
@@ -586,7 +581,7 @@
       <div class="col-md-6">
         <div class="widget">
           <div class="widget-head">
-            <div class="pull-left">Best Sellers</div>
+            <div class="pull-left">Fun at work</div>
             <div class="widget-icons pull-right">
               <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
               <a href="#" class="wclose"><i class="fa fa-times"></i></a>
@@ -594,11 +589,12 @@
             <div class="clearfix"></div>
           </div>
           <div class="widget-content">
-            <span id="sellers_Chart" style="width: 450px; height: 250px; display: inline-block"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 500px; height: 250px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="500" height="250" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_13"><rect x="84" y="48" width="333" height="155"></rect></clipPath></defs><rect x="0" y="0" width="500" height="250" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="84" y="28.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Recent visited Categories</text></g><g><rect x="84" y="48" width="333" height="155" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_13)"><g><rect x="84" y="202" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="164" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="125" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="87" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="48" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="95" y="126" width="34" height="76" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="150" y="138" width="34" height="64" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="205" y="188" width="34" height="14" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="261" y="165" width="34" height="37" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="316" y="157" width="34" height="45" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="371" y="49" width="34" height="153" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="84" y="202" width="333" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="112.16666666666667" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Samsung</text></g><g><text text-anchor="middle" x="167.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Apple</text></g><g><text text-anchor="middle" x="222.83333333333334" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Xolo</text></g><g><text text-anchor="middle" x="278.1666666666667" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Micromax</text></g><g><text text-anchor="middle" x="333.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">LG</text></g><g><text text-anchor="middle" x="388.83333333333337" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Motorola</text></g><g><text text-anchor="end" x="73" y="206.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="73" y="167.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">2,500</text></g><g><text text-anchor="end" x="73" y="129.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">5,000</text></g><g><text text-anchor="end" x="73" y="90.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">7,500</text></g><g><text text-anchor="end" x="73" y="52.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">10,000</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Seller</th><th>Rating</th></tr></thead><tbody><tr><td>Samsung</td><td>5000</td></tr><tr><td>Apple</td><td>4200</td></tr><tr><td>Xolo</td><td>1000</td></tr><tr><td>Micromax</td><td>2500</td></tr><tr><td>LG</td><td>3000</td></tr><tr><td>Motorola</td><td>10000</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 260px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">Recent visited Categories</div><div></div></div></span>
+            <span id="sellers_Chart" style="width: 450px; height: 250px; display: inline-block"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 500px; height: 250px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="500" height="250" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_13"><rect x="84" y="48" width="333" height="155"></rect></clipPath></defs><rect x="0" y="0" width="500" height="250" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="84" y="28.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Recent visited Categories</text></g><g><rect x="84" y="48" width="333" height="155" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_13)"><g><rect x="84" y="202" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="164" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="125" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="87" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="84" y="48" width="333" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="95" y="126" width="34" height="76" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="150" y="138" width="34" height="64" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="205" y="188" width="34" height="14" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="261" y="165" width="34" height="37" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="316" y="157" width="34" height="45" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="371" y="49" width="34" height="153" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="84" y="202" width="333" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="112.16666666666667" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Diwali</text></g><g><text text-anchor="middle" x="167.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Christmas</text></g><g><text text-anchor="middle" x="222.83333333333334" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">New year</text></g><g><text text-anchor="middle" x="278.1666666666667" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Lohri</text></g><g><text text-anchor="middle" x="333.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Eid</text></g><g><text text-anchor="middle" x="388.83333333333337" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Independance</text></g><g><text text-anchor="end" x="73" y="206.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">10</text></g><g><text text-anchor="end" x="73" y="167.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">100</text></g><g><text text-anchor="end" x="73" y="129.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">150</text></g><g><text text-anchor="end" x="73" y="90.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">100</text></g><g><text text-anchor="end" x="73" y="52.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">40</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Seller</th><th>Rating</th></tr></thead><tbody><tr><td>Samsung</td><td>5000</td></tr><tr><td>Apple</td><td>4200</td></tr><tr><td>Xolo</td><td>1000</td></tr><tr><td>Micromax</td><td>2500</td></tr><tr><td>LG</td><td>3000</td></tr><tr><td>Motorola</td><td>10000</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 260px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">Upcoming events</div><div></div></div></span>
           </div>
         </div>
       </div>
     </div>
+
   </div>
   <!-- Best Sellers With Rating ends here -->
   <!-- employeeServicesContent -->
@@ -614,12 +610,32 @@
     <div class="container">
 
     <div class="row">
-      <div class="col-medium-12">
+      <div class="col-medium-4">
         <div class="col-xs-12 col-md-4">
           <div class="tile-stats tile-red">
             <div class="icon"><i class="fa fa-users"></i></div>
-            <div class="num" data-start="0" data-end="83" data-postfix="" data-duration="1500" data-delay="0"><a href="javascript:;" class="">Events</a></div>
-            <h3>Quarterly meeting & Townhall</h3>
+            <div class="num" data-start="0" data-end="83" data-postfix="" data-duration="1500" data-delay="0"><a href="javascript:;" class="">My Info</a></div>
+            <h3>Basic info with current project</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-medium-4">
+        <div class="col-xs-12 col-md-4">
+          <div class="tile-stats tile-aqua">
+            <div class="icon"><i class="fa fa-edit"></i></div>
+            <div class="num" data-start="0" data-end="83" data-postfix="" data-duration="1500" data-delay="0"><a href="javascript:;" class="">My Documents</a></div>
+            <h3>Salary slip, PF form</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-medium-4">
+        <div class="col-xs-12 col-md-4">
+          <div class="tile-stats tile-red">
+            <div class="icon"><i class="fa fa-users"></i></div>
+            <div class="num" data-start="0" data-end="83" data-postfix="" data-duration="1500" data-delay="0"><a href="javascript:;" class="">Skills</a></div>
+            <h3>Current project skills</h3>
           </div>
         </div>
       </div>
@@ -647,6 +663,8 @@
                       <th>First Name</th>
                       <th>Last Name</th>
                       <th>Lion Id</th>
+                      <th>Project</th>
+                      <th>Duration</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -655,18 +673,24 @@
                       <td>Nitin</td>
                       <td>Jaryal</td>
                       <td>nitinjar</td>
+                      <td>MyDeposits</td>
+                      <td>6 Months</td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>
                       <td>Mohal</td>
                       <td>Thornton</td>
-                      <td>mohtho</td>
+                      <td>mohatho</td>
+                      <td>MyDeposits</td>
+                      <td>6 Months</td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
                       <td>Anand</td>
                       <td>Kumar</td>
                       <td>anankum</td>
+                      <td>DMart</td>
+                      <td>1 Year</td>
                     </tr>
                   </tbody>
                 </table>
@@ -674,79 +698,34 @@
             </div>
           </div>
         </div>
-        <!-- Chats, File upload and Recent Comments -->
-        <div class="row">
-          <div class="col-md-6">
-            <div class="widget">
-              <div class="widget-head">
-                <div class="pull-left">Quick Post</div>
-                <div class="widget-icons pull-right">
-                  <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="clearfix"></div>
+
+            <div class="col-md-6">
+              <div class="panel panel-primary"> <div class="panel-heading"> <h3 class="panel-title">My Documents</h3> </div> <div class="panel-body">
+              <ul class="list-group">
+              <li class="list-group-item"><a href="">Payslips</a></li>
+              <li class="list-group-item"><a href="">PF Form</a></li>
+              <li class="list-group-item"><a href="">Compensation</a></li>
+              </ul>
               </div>
-              <div class="widget-content">
-                <div class="padd">
-                  <div class="form quick-post">
-                    <!-- Edit profile form (not working)-->
-                    <form class="form-horizontal">
-                      <!-- Title -->
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="title">Title</label>
-                        <div class="col-lg-8">
-                          <input class="form-control" id="title" type="text">
-                        </div>
-                      </div>
-                      <!-- Content -->
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="content">Content</label>
-                        <div class="col-lg-8">
-                          <textarea class="form-control" rows="5" id="content"></textarea>
-                        </div>
-                      </div>
-                      <!-- Cateogry -->
-                      <div class="form-group">
-                        <label class="control-label col-lg-2">Category</label>
-                        <div class="col-lg-5">
-                          <select class="form-control">
-                            <option selected="selected" value="">- Choose Cateogry -</option>
-                            <option value="1">General</option>
-                            <option value="2">News</option>
-                            <option value="3">Media</option>
-                            <option value="4">Funny</option>
-                          </select>
-                        </div>
-                      </div>
-                      <!-- Tags -->
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="tags">Tags</label>
-                        <div class="col-lg-8">
-                          <input class="form-control" id="tags" type="text">
-                        </div>
-                      </div>
-                      <!-- Buttons -->
-                      <div class="form-group">
-                        <!-- Buttons -->
-                        <div class="col-lg-offset-2 col-lg-6">
-                          <button type="submit" class="btn btn-sm btn-success">Publish</button>
-                          <button type="submit" class="btn btn-sm btn-danger">Save Draft</button>
-                          <button type="reset" class="btn btn-sm btn-default">Reset</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="widget-foot">
-                  <!-- Footer goes here -->
-                </div>
               </div>
             </div>
-            <!-- File Upload widget -->
-          </div>
+      </div>
+        <!-- Chats, File upload and Recent Comments -->
+        <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-primary"> <div class="panel-heading"> <h3 class="panel-title">My Documents</h3> </div> <div class="panel-body">
+              <ul class="list-group">
+              <li class="list-group-item"><a>Payslips</a></li>
+
+              <li class="list-group-item">
+                    <div><img src="/{{config.baseUrl}}images/payslip.png" width="95%"></div>
+              </li>
+              </ul>
+              </div>
+              </div>
+            </div>
           <!-- Dashboard graph ends -->
         </div>
-      </div>
     </div>
   </div>
   <!-- employeeServicesContent ends -->
@@ -1051,7 +1030,7 @@
           <div class="clearfix"></div>
         </div>
         <div class="widget-content">
-          <span id="barchart_diff" style="width: 450px; height: 250px; display: inline-block"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 500px; height: 250px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="500" height="250" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_12"><rect x="84" y="48" width="333" height="155"></rect></clipPath></defs><rect x="0" y="0" width="500" height="250" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="84" y="28.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Coupon avail categories</text></g><g><rect x="84" y="48" width="333" height="155" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_12)"><g><rect x="84" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="167" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="250" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="333" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="416" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="85" y="53" width="7" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="59" width="165" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="79" width="6" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="84" width="13" height="5" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="105" width="7" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="110" width="32" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="130" width="138" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="136" width="165" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="156" width="95" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="161" width="99" height="5" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="182" width="271" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="187" width="331" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="84" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="84.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="middle" x="167.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">2,500</text></g><g><text text-anchor="middle" x="250.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">5,000</text></g><g><text text-anchor="middle" x="333.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">7,500</text></g><g><text text-anchor="middle" x="416.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">10,000</text></g><g><text text-anchor="end" x="73" y="65.18333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Phones</text></g><g><text text-anchor="end" x="73" y="90.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Clothes</text></g><g><text text-anchor="end" x="73" y="116.51666666666667" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Shoes</text></g><g><text text-anchor="end" x="73" y="142.18333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Clothes</text></g><g><text text-anchor="end" x="73" y="167.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Grocery</text></g><g><text text-anchor="end" x="73" y="193.51666666666668" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Toys</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>Phones</td></tr><tr><td>Clothes</td></tr><tr><td>Shoes</td></tr><tr><td>Clothes</td></tr><tr><td>Grocery</td></tr><tr><td>Toys</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 260px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">Recent visited Categories</div><div></div></div></span>
+          <span id="barchart_diff" style="width: 450px; height: 250px; display: inline-block"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 500px; height: 250px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="500" height="250" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_12"><rect x="84" y="48" width="333" height="155"></rect></clipPath></defs><rect x="0" y="0" width="500" height="250" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="84" y="28.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Coupon avail categories( Amazon, Flipkart )</text></g><g><rect x="84" y="48" width="333" height="155" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_12)"><g><rect x="84" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="167" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="250" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="333" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="416" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="85" y="53" width="7" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="59" width="165" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="79" width="6" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="84" width="13" height="5" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="105" width="7" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="110" width="32" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="130" width="138" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="136" width="165" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="156" width="95" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="161" width="99" height="5" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="85" y="182" width="271" height="15" stroke="none" stroke-width="0" fill="#eeeeee"></rect><rect x="85" y="187" width="331" height="4" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="84" y="48" width="1" height="155" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="84.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="middle" x="167.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">2,500</text></g><g><text text-anchor="middle" x="250.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">5,000</text></g><g><text text-anchor="middle" x="333.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">7,500</text></g><g><text text-anchor="middle" x="416.5" y="219.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">10,000</text></g><g><text text-anchor="end" x="73" y="65.18333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Phones</text></g><g><text text-anchor="end" x="73" y="90.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Clothes</text></g><g><text text-anchor="end" x="73" y="116.51666666666667" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Shoes</text></g><g><text text-anchor="end" x="73" y="142.18333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Clothes</text></g><g><text text-anchor="end" x="73" y="167.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Grocery</text></g><g><text text-anchor="end" x="73" y="193.51666666666668" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Toys</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>Phones</td></tr><tr><td>Clothes</td></tr><tr><td>Shoes</td></tr><tr><td>Clothes</td></tr><tr><td>Grocery</td></tr><tr><td>Toys</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 260px; left: 510px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">Recent visited Categories</div><div></div></div></span>
         </div>
       </div>
     </div>
