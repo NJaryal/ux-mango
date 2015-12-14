@@ -5348,6 +5348,7 @@ box-sizing: border-box;
     display: block;
   }
 }
+
 .page-container.sidebar-collapsed .sidebar-menu {
   width: 65px;
 }
@@ -8839,8 +8840,12 @@ textareatable .replace-inputs input {
   padding: 0;
 }
 .tile-stats .num {
-  font-size: 38px;
-  font-weight: bold;
+  font-size: 35px;
+  font-weight: normal;
+
+  a {
+    text-decoration: none;
+  }
 }
 .tile-stats h3 {
   font-size: 18px;
@@ -57299,4 +57304,13 @@ table .checkbox {
   .row {
     margin-bottom: 25px;
   }
+}
+
+.page-header--logo {
+  color: #fff;
+}
+
+.page-header--logo-slogan {
+  color: #efb61a;
+  text-transform: uppercase;
 }
